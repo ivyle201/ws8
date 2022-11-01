@@ -1,0 +1,97 @@
+Script started on 2022-10-29 18:42:41-04:00
+[vivian@sjsu ~]$ 
+[vivian@sjsu ~]$ mkdir ws8
+[vivian@sjsu ~]$ 
+[vivian@sjsu ~]$ cd ws8
+[vivian@sjsu ws8]$ 
+
+Q1
+# Repeat worksheet #2 using awk to get the entire reviews that are verified or not. 
+# Use awk to get the entire text of the verified and unverified reviews
+# Redirect the "verified" true reviews to a file "verified.txt".
+# Then put the unverified reviews in another file "unverified.txt" using redirection.
+
+[vivian@sjsu ws8]$ awk -F "\t" '$12=="Y" {print $14}' ../amazon_reviews_us_Books_v1_02.tsv | head -n 100 > verified.txt
+[vivian@sjsu ws8]$ awk -F "\t" '$12=="N" {print $14}' ../amazon_reviews_us_Books_v1_02.tsv | head -n 100 > unverified.txt
+
+
+Q2
+# Find the 10 most frequent words in the review_body of the verified reviews, then find the 10 most frequent 
+# words in the review_body of the unverified reviews. Note: If this is taking too long for the entire dataset, 
+# it is sufficient to do it just for 100 reviews so you get an idea.
+
+
+# Filter out characters we don't care about (including html). -r: extended regex
+[vivian@sjsu ws8]$ sed -r "s/<\w+ *\/?>//g; s/[^a-zA-Z']/ /g" verified.txt > filtered_verified.txt 
+[vivian@sjsu ws8]$ sed -r "s/<\w+ *\/?>//g; s/[^a-zA-Z']/ /g" unverified.txt > filtered_unverified.txt
+
+
+# create script to count words
+[vivian@sjsu ws8]$ vi count_words_awk_script
+[vivian@sjsu ws8]$ cat count_words_awk_script
+
+
+{
+  # NF: number of fields...iterate each word in one line
+  for (i=1; i<=NF; i++)
+  {
+    #assigning word=i (lower case)
+    word=tolower($i)
+    #look up the count for word in all_words. Initial count=0 (empty)
+    count=all_words[word]
+    if (count == 0)
+    {
+      all_words[word]=1
+    }
+    else
+    {
+      all_words[word]=count + 1
+    }
+  }
+
+}
+#bracket{ needs to be on the same line as END, else it will give you an error
+END {
+  for (word in all_words)
+  {
+    # print word, tab, and count
+    print word"\t"all_words[word]
+  }
+}
+
+# count verified words and sort
+[vivian@sjsu ws8]$ awk -f count_words_awk_script filtered_verified.txt | sort -k2 -nr | head -n 10 > top10_words_verified_review_body.txt
+[vivian@sjsu ws8]$ cat top10_words_verified_review_body.txt
+the	842
+and	456
+of	439
+to	373
+a	372
+is	273
+in	250
+i	223
+this	185
+it	179
+
+# count unverified words and sort
+[vivian@sjsu ws8]$ awk -f count_words_awk_script filtered_verified.txt | sort -k2 -nr | head -n 10 > top10_words_unverified_review_body.txt                                          
+[vivian@sjsu ws8]$ cat top10_words_unverified_review_body.txt 
+the	975
+and	516
+of	512
+to	458
+a	402
+is	317
+in	292
+that	238
+i	233
+this	213
+
+
+
+[vivian@sjsu ws8]$ 
+[vivian@sjsu ws8]$ 
+[vivian@sjsu ws8]$ exit
+exit
+
+Script done on 2022-10-29 21:52:43-04:00

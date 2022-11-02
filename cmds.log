@@ -1,1000 +1,1000 @@
-   62  cat file1.txt 
-   63  cat file2.txt
-   64  f -o1.1,2.2 file1.txt file2.txt
-   65  join -o1.1,2.2 file1.txt file2.txt 
-   66  awk 'awk 'NR==FNR{ a[$1]=$2; print}' file1.txt file2.txt
-   67   awk 'NR==FNR{ a[$1]=$2; print}' file1.txt file2.txt
-   68   awk 'NR==FNR{ a[$1]=$2; print $1}' file1.txt file2.txt
-   69   awk 'NR==FNR{ a[$1]=$2; print $2}' file1.txt file2.txt
-   70   awk 'NR==FNR{ a[$1]=$1; print }' file1.txt file2.txt
-   71   awk 'NR==FNR{ a[$1]=$2; next} $1 in a{$2=a[1];  print }' file1.txt file2.txt
-   72  fgrep -f file2.txt file1.txt
-   73  sed 's/7 d/' file1.txt
-   74  sed -i '/key1/ d' file1.txt 
-   75  cat file1.txt
-   76   awk 'NR==FNR{ a[$1]=$2; next} $1 in a{$2=a[1];  print }' file1.txt file2.txt
-   77  join -o1.1,2.2 file1.txt file2.txt 
-   78  join -o1.1,2 file1.txt file2.txt 
-   79  join -o1.1,2.1 file1.txt file2.txt 
-   80  join -o1.1,2.2 file1.txt file2.txt 
-   81  echo "key2" fil1.txt
-   82  join -o1.1,2.2 file1.txt file2.txt 
-   83  fgrep -f file1.txt file2.txt
-   84  cat file1.txt
-   85  cat file2.txt
-   86  echo "key1" >file1.txt
-   87  echo "key2" >file1.txt
-   88  cat file1.txt
-   89  vi file1.txt
-   90  cat file1.txt
-   91  cat file2.txt
-   92  vi file2.txt
-   93  vi file1.txt
-   94  cat file1.txt
-   95  cat file2.txt
-   96  fgrep -f file1.txt file2.txt
-   97  vi file1.txt
-   98  fgrep -f file1.txt file2.txt
-   99  fgrep -f file1.txt file2.txt | cut -f1 | sort 
-  100  fgrep -f file1.txt file2.txt | cut -f1 | sort > file3.txt
-  101  fgrep -f file1.txt file2.txt
-  102  fgrep -f file1.txt file2.txt | sort
-  103  fgrep -f file1.txt file2.txt | sort > file3.txt
-  104  cat file1.txt
-  105  sed '/^s d/' file1.txt
-  106  sed '/^$ d/' file1.txt
-  107  sed '/^$/d/' file1.txt
-  108  sed '/^$/d' file1.txt
-  109  cat file1.txt
-  110  sed -i '/^$/d' file1.txt
-  111  cat file1.txt
-  112  cat file2.txt
-  113  cat file3.txt
-  114  join -o1.1,2.2 file1.txt file3.txt
-  115  sort file1.txt > file4.txt
-  116  cat file4.txt
-  117  cat file2.txt
-  118  fgrep -f file4.txt file2.txt
-  119  cat file1.txt
-  120  fgrep -f file1.txt file2.txt
-  121  fgrep -f file1.txt file2.txt > fgrep.txt
-  122  sort -f1 fgrep.txt > sorted_fgrep.txt
-  123  join -o1.1,2.2 file4.txt fgrep.txt
-  124  cat file4.txt
-  125  cp /home/test/A1/downloaded_tweets_extend_original_nolf2.tsv
-  126  cp /home/test/A1/downloaded_tweets_extend_original_nolf2.tsv .
-  127  head -n 10 downloaded_tweets_extend_original_nolf2.tsv 
-  128  cp /home/test/A1/downloaded_tweets_extend_nolf2.tsv .
-  129  tmux attach -t a4
-  130  mkdir A4
-  131  cd A4
-  132  [vivian@sjsu ~]$ cut -f 2,5,6 downloaded_tweets_extend_nolf2.tsv | grep "type=retweeted" | sed -r 's/\[<ReferencedTweet id=([0-9]+) type=retweeted\]/\1/' | head -n 4                                                                                   
-  133  308045021       1513654494504136709
-  134  308045021       1513774168348704770
-  135  308045021       1519864927997075458
-  136  cut -f 2,5,6 ../downloaded_tweets_extend_nolf2.tsv | grep "type=retweeted" | sed -r 's/\[<ReferencedTweet id=([0-9]+) type=retweeted\]/\1/' | head -n 4
-  137  cut -f 2,5,6 ../downloaded_tweets_extend_nolf2.tsv | grep "type=retweeted" | sed -r 's/\[<ReferencedTweet id=([0-9]+) type=retweeted\]/\1/' | cut -f2 > retweeted_ref_MID.tsv
-  138   head retweeted_ref_MID.tsv 
-  139  fgrep -f retweeted_ref_MID.tsv | cut -f1,2 downloaded_tweets_extend_original_nolf2.tsv > fgrep_result_MID_authorID_original.tsv
-  140  fgrep -f retweeted_ref_MID.tsv | cut -f1,2 ../downloaded_tweets_extend_original_nolf2.tsv > fgrep_result_MID_authorID_original.tsv
-  141  fgrep -f retweeted_ref_MID.tsv | cut -f1,2 downloaded_tweets_extend_original_nolf2.tsv > fgrep_result_MID_authorID_original.tsv
-  142  fgrep -f retweeted_ref_MID.tsv | cut -f1,2 downloaded_tweets_extend_original_nolf2.tsv | wc -l
-  143  fgrep -f retweeted_ref_MID.tsv | cut -f1,2 downloaded_tweets_extend_original_nolf2.tsv | head -n 4
-  144  fgrep -f retweeted_ref_MID.tsv | cut -f1,2 downloaded_tweets_extend_original_nolf2.tsv > fgrep_result_MID_authorID_original.tsv 
-  145  cut -1,2 downloaded_tweets_extend_original_nolf2.tsv | fgrep -f retweeted_ref_MID.tsv | wc -l
-  146  cut -f1,2 downloaded_tweets_extend_original_nolf2.tsv | fgrep -f retweeted_ref_MID.tsv | wc -l
-  147  fgrep -f retweeted_ref_MID.tsv | cut -f1,2 downloaded_tweets_extend_original_nolf2.tsv | wc -l
-  148  cut -f1,2 downloaded_tweets_extend_original_nolf2.tsv | fgrep -f retweeted_ref_MID.tsv > fgrep_result_MID_authorID.tsv 
-  149  head -n 4 fgrep_result_MID_authorID
-  150  sort retweeted_ref_MID.tsv | tail -n +2 > sorted_alpha_retweeted_ref_MID.tsv
-  151  fgrep -f sorted_alpha_retweeted_ref_MID.tsv cut_col1-2_downloaded_original.tsv > fgrep_retweeted_MID_original_MID_AID.tsv 
-  152  head fgrep_retweeted_MID_original_MID_AID.tsv 
-  153  sort fgrep_retweeted_MID_original_MID_AID.tsv > sorted_fgrep_retweeted_MID_original_MID_AID.tsv
-  154  head -n 4 sorted_fgrep_retweeted_MID_original_MID_AID.tsv 
-  155  join -t $'\t' -o1.1,2.2 sorted_alpha_retweeted_ref_MID.tsv sorted_fgrep_retweeted_MID_original_MID_AID.tsv | head -n 4
-  156  join -t $'\t' -o1.1,2.2 sorted_alpha_retweeted_ref_MID.tsv sorted_fgrep_retweeted_MID_original_MID_AID.tsv > joined_sorted_alpha_retweeted_sorted_fgrep_retw.tsv 
-  157  cut -f2 joined_sorted_alpha_retweeted_sorted_fgrep_retw.tsv | sort | uniq -c | sort -nr | head -n 10 > top10_retweeted_AuthorIDs.tsv
-  158  head top10_retweeted_AuthorIDs.tsv 
-  159  exit
-  160  cd A4
-  161  l
-  162  cd
-  163  tmux attach -t a4
-  164  cd A4
-  165  l
-  166  head -n 5 for sorted_alpha_retweeted_ref_MID.tsv 
-  167  head -n 5 fgrep
-  168  head -n 5 fgrep_retweeted_MID_original_MID_AID.tsv 
-  169  head -n 5 cut_col1-2_downloaded_original.tsv 
-  170  tail -n +2 cut_col1-2_downloaded_original.tsv | head -n 5
-  171  tail -n +2 cut_col1-2_downloaded_original.tsv | sort -k1 | tail 10
-  172  tail -n +2 cut_col1-2_downloaded_original.tsv | sort -k1 | tail -10
-  173  sed '/[^0-9]/p' cut_col1-2_downloaded_original.tsv 
-  174  sed '/[0-9]!/p' cut_col1-2_downloaded_original.tsv 
-  175  sed -n '/[^0-9]/p' cut_col1-2_downloaded_original.tsv 
-  176  sed -n '/[0-9]/! p' cut_col1-2_downloaded_original.tsv 
-  177  sed -n '/[0-9]/ p' cut_col1-2_downloaded_original.tsv 
-  178  sed -n '/[0-9]/! p' cut_col1-2_downloaded_original.tsv 
-  179  sed -n '/[a-Z]/ p' cut_col1-2_downloaded_original.tsv 
-  180  grep "1501782491375489024" downloaded_tweets_extend_original_nolf2.tsv 
-  181  grep "1501782491375489024" /home/test/A1/downloaded_tweets_extend_original_nolf2.tsv 
-  182  grep "1501782491375489024" /home/test/A1/downloaded_tweets_extend_nolf2.tsv 
-  183  grep "(Video: Days of Palestine) https://t.co/pOPZBJE9ZD" /home/test/A1/downloaded_tweets_extend_original_nolf2.tsv 
-  184  grep -A2 -B2  "(Video: Days of Palestine) https://t.co/pOPZBJE9ZD" /home/test/A1/downloaded_tweets_extend_original_nolf2.tsv 
-  185  grep -A1 -B1 "Video: Mohammed Najjar https://t.co/8pazlh0Ti0" /home/test/A1/downloaded_tweets_extend_original_nolf2.tsv
-  186  grep -A2 -B2 "Video: Mohammed Najjar https://t.co/8pazlh0Ti0" /home/test/A1/downloaded_tweets_extend_original_nolf2.tsv
-  187  cut -f1 https://t.co/8pazlh0Ti0" /home/test/A1/downloaded_tweets_extend_original_nolf2.tsv |  grep -A2 -B2 "Video: Mohammed Najjar https://t.co/8pazlh0Ti0"
-  188  cut -f1 /home/test/A1/downloaded_tweets_extend_original_nolf2.tsv |  grep -A2 -B2 "Video: Mohammed Najjar https://t.co/8pazlh0Ti0"
-  189  l
-  190  tail -n 10 fgrep_retweeted_MID_original_MID_AID.tsv 
-  191  cut -f1 fgrep_retweeted_MID_original_MID_AID.tsv | sed '/[a-Z]/' 
-  192  cut -f1 fgrep_retweeted_MID_original_MID_AID.tsv | sed -n '/[a-Z]/p' 
-  193  sed -n '/[a-Z]/p' sorted_alpha_retweeted_ref_MID.tsv 
-  194  sort fgrep_retweeted_MID_original_MID_AID.tsv | tail -10
-  195  sort fgrep_retweeted_MID_original_MID_AID.tsv | head -n 10
-  196  grep "1501782491375489024" downloaded*.tsv
-  197  tmux attach -t a4
-  198  vi file1
-  199  vi file2
-  200  cat file1
-  201  cat file2
-  202  vi file2
-  203  cat file1
-  204  cat file2
-  205  join -t $'\t' -o2.1,1,2 -1 2 file1 file2
-  206  join -t $'\t' -o2.1,1,2 file1 file2
-  207  join -t $'\t' -o2.1,1.2 file1 file2
-  208  vi file1
-  209  cat file1
-  210  cat file2
-  211  join -t $'\t' -o2.1,1.2 file1 file2
-  212  join -t $'\t' -1 2 -o2.1,1.2 file1 file2
-  213  join -t $'\t' -1 2 -o2.1,1.1 file1 file2
-  214  join -t $'\t' -1 2 -o1.1,2.2 file1 file2
-  215  join -t $'\t' -1 2 -o2.2,1.1 file1 file2
-  216  tmux attach-session -t a4
-  217  tmux ls
-  218  tmux attach -t a4
-  219  ls
-  220  ln -s gnuplot-5.4.5/src/gnuplot
-  221  ./gnuplot
-  222  logout
-  223  ./gnuplot
-  224  cd gnuplot-5.4.5/
-  225  ls
-  226  more README 
-  227  set terminal x11
-  228  cd ..
-  229  ./gnuplot
-  230  ./configure
-  231  ls
-  232  cd gnuplot-5.4.5/
-  233  ./configure
-  234  ./configure --with-qt
-  235  make --with-qt
-  236  ./configure --with-qt
-  237  make
-  238  src/gnuplot 
-  239  ./configure --with-qt
-  240  lotout
-  241  logout
-  242  ./gnuplot
-  243  touch ~/.Xauthority 
-  244  ls
-  245  cd A4
-  246  ls
-  247  cat ../A3/a3.txt
-  248  ls
-  249  ls -rt
-  250  ls -lrt
-  251  head a4q2.tsv
-  252  ls -lrt
-  253  ls -lt
-  254  awk '{$1"\t"$2}' a4q2.tsv | sort -k2 -n > sorted_a4q2.tsv
-  255  head sorted_a4q2.tsv 
-  256  awk '{$1"\t"$2}' a4q2.tsv |head
-  257  awk '{print $1"\t"$2}' a4q2.tsv | sort -k2 -n > sorted_a4q2.tsv
-  258  head sorted_a4q2.tsv 
-  259  chmod 700 .
-  260  l
-  261  xit
-  262  exit
-  263  cd ws4
-  264  l
-  265  cd ws4
-  266  cd ws6
-  267  l
-  268  cat ws6.txt
-  269  cron log
-  270  cron status
-  271  crontab --help
-  272  l
-  273  fgrep "0312864590" ../amazon_reviews_us_Books_v1_02.tsv 
-  274  fgrep -h "0312864590" ../amazon_reviews_us_Books_v1_02.tsv 
-  275  l
-  276  cat ws6.txt 
-  277  cd
-  278  l
-  279  rm A4_pl*.svg
-  280  l
-  281  rm fil*.txt
-  282  rm fgrep.txt
-  283  rm sorted_fgrep.txt 
-  284  rm cutf25_grep_retweeted_sedRegex_downloaded_extend.tsv 
-  285  l
-  286  rm .Xauthority 
-  287  l
-  288  l -ltrh
-  289  ls
-  290  ls -lh
-  291  rm cutCol1-2_original_authorID.tsv 
-  292  ls -lh
-  293  vi .bashrc
-  294  ls
-  295  source .bashrc
-  296  vi .bashrc
-  297  ls -ltrh
-  298  vi .bashrc
-  299  source .bashrc
-  300  cd A4
-  301  ls
-  302  cd 
-  303  tmux ls
-  304  tmux attach -t a4
-  305  cd A4/
-  306  ls
-  307  head a4q1.tsv 
-  308  cd ws6
-  309  ls
-  310  ws6.txt
-  311  cat ws6.txt
-  312  ls
-  313  cd ws6
-  314  ls
-  315  cat ws6.txt
-  316  cd
-  317  l
-  318  find . -name "076450861X.txt"
-  319  cd ws4
-  320  cd worksheet4
-  321  ls
-  322  cat ws4.txt
-  323  cd
-  324  xargs -t -L 1 bash -c 'grep $0 amazon_reviews_us_Books_v1_02.tsv | cut -f9 | tee PRODUCTS/$0.txt'
-  325  fgrep "xargs -t -L 1 bash -c 'grep $0 amazon_reviews_us_Books_v1_02.tsv | cut -f9 | tee PRODUCTS/$0.txt'
-  326  bash -c grep $0 amazon_reviews_us_Books_v1_02.tsv | cut -f9 | tee PRODUCTS/$0.txt 076450861X 
-  327  tmux new-session -t ws6
-  328  cd ws6
-  329  mv ws6.txt ws6_original.txt
-  330  cat ws6_original.txt
-  331  cd ws6
-  332  ls
-  333  cd 
-  334  cd a4
-  335  cd A4
-  336  ls
-  337  cat joined_sorted_alpha_retweeted_sorted_fgrep_retw.tsv
-  338  ls
-  339  tmux attach -t a4
-  340  cd A4
-  341  ls
-  342  cat top10_retweeted_AuthorIDs.tsv 
-  343  head sorted_fgrep_retweeted_MID_original_MID_AID.tsv
-  344  head a4q1.tsv
-  345  ls
-  346  cat top10_retweeted_AuthorIDs.tsv 
-  347  mkdir ../temp_graph
-  348  awk '{print $2}' top10_retweeted_AuthorIDs.tsv > ../temp_graph/authors.txt
-  349  cat ../temp_graph/authors.txt 
-  350  fgrep -f ../temp_graph/authors.txt a4q1.tsv > ../temp_graph/graph_top_10_authors.tsv
-  351  ls
-  352  cut -f2,5 downloaded_tweets_extend_nolf2.tsv | grep "type=retweeted" | sed -r 's/\[<ReferencedTweet id=([0-9]+) type=retweeted\]/\1/' > cutf25_grep_retweeted_sedRegex_downloaded_extend.tsv
-  353  cd A4
-  354  cut -f2,5 downloaded_tweets_extend_nolf2.tsv | grep "type=retweeted" | sed -r 's/\[<ReferencedTweet id=([0-9]+) type=retweeted\]/\1/' > cutf25_grep_retweeted_sedRegex_downloaded_extend.tsv
-  355  head cutf25_grep_retweeted_sedRegex_downloaded_extend.tsv 
-  356  sort -k2 cutf25_grep_retweeted_sedRegex_downloaded_extend.tsv > sorted_cutf25_grep_retweeted_sedRegex_downloaded_extend.tsv
-  357  head -n 5 sorted_cutf25_grep_retweeted_sedRegex_downloaded_extend.tsv 
-  358  fgrep -f retweeted_ref_MID.tsv | cut -f1,2 downloaded_tweets_extend_original_nolf2.tsv > fgrep_result_MID_authorID_original.tsv
-  359  l
-  360  join -t $'\t' -1 2 -o2.2,1.1 sorted_cutf25_grep_retweeted_sedRegex_downloaded_extend.tsv sorted_fgrep_retweeted_MID_original_MID_AID.tsv | awk 'BEGIN {print "A_ID\tB_ID"} {print $0}' > a4q1.tsv
-  361  head a4q1.tsv 
-  362  tail -n +2 a4q1.tsv | cut -f1 | sort | uniq -c | sort -nr | awk '{if ($1>=3) print $1}' | sort | uniq -c | sort -nr > a4q2.tsv
-  363  head a4q2.tsv
-  364  awk '{print $1\t$2}' a4q2 | sort -k2 -n | head -n 10
-  365  awk '{print $1"\t"$2}' a4q2 | sort -k2 -n | head -n 10
-  366  awk '{print $1"\t"$2}' a4q2.tsv | sort -k2 -n | head -n 10
-  367  awk '{print $1"\t"$2}' a4q2.tsv | sort -k2 -n | tail -20
-  368  ls -ltrh
-  369  awk '{print $1"\t"$2}' a4q2.tsv | sort -k2 -n > sorted_a4q2.tsv 
-  370  head sorted_a4q2.tsv 
-  371  head -60 sorted_a4q2.tsv 
-  372  head -60 sorted_a4q2.tsv > 60_bars_only_head60_sorted_a4q2.tsv
-  373  ../gnuplot
-  374  exit
-  375  cd A4
-  376  ls
-  377  cat a4q1.tsv
-  378  ls
-  379  tmux attach -t a4
-  380  ls
-  381  cd
-  382  ls
-  383  cat a4.txt
-  384  ls
-  385  cat a4.1.txt
-  386  ls
-  387  mv a4.1.txt A4
-  388  mv a4.txt A4
-  389  ls
-  390  cd A4
-  391  tmux attach -t a4
-  392   cut -f 2,5,6 downloaded_tweets_extend_nolf2.tsv | grep "type=retweeted" | sed -r 's/\[<ReferencedTweet id=([0-9]+) type=retwee                  -n 4                                      
-  393  ut -f 2,5,6 ../downloaded_tweets_extend_nolf2.tsv | grep "type=retweeted" | sed -r 's/\[<ReferencedTweet id=([0-9]+) type=retweeted\]/\1/' | head -n 5
-  394  cd A4
-  395  cut -f 2,5,6 ../downloaded_tweets_extend_nolf2.tsv | grep "type=retweeted" | sed -r 's/\[<ReferencedTweet id=([0-9]+) type=retweeted\]/\1/' | head -n 4
-  396  ls
-  397  cut -f 2,5,6 downloaded_tweets_extend_nolf2.tsv | grep "type=retweeted" | sed -r 's/\[<ReferencedTweet id=([0-9]+) type=retweeted\]/\1/' | head -n 4
-  398  cut -1,2 downloaded_tweets_extend_original_nolf2.tsv | fgrep -f retweeted_ref_MID.tsv | head -n 4
-  399  cut -f1,2 downloaded_tweets_extend_original_nolf2.tsv | fgrep -f retweeted_ref_MID.tsv | head -n 4
-  400  cut -f1,2 downloaded_tweets_extend_original_nolf2.tsv | fgrep -f retweeted_ref_MID.tsv | wc -l
-  401  sort retweeted_ref_MID.tsv | head -n 4
-  402  sort retweeted_ref_MID.tsv | wc -l
-  403  sort retweeted_ref_MID.tsv | sed 's/^$/ d' | wc -l
-  404  sort retweeted_ref_MID.tsv | sed -r 's/\s*/ | wc -l
-  405  sort retweeted_ref_MID.tsv | sed -r 's/^\s*/ | wc -l
-  406  sort retweeted_ref_MID.tsv | sed -r '/^\s*/ | wc -l
-  407  sort retweeted_ref_MID.tsv | sed -r '/^\s*/d | wc -l
-  408  sort retweeted_ref_MID.tsv | sed -r '/^\s*/d' | wc -l
-  409  sort retweeted_ref_MID.tsv | sed -r '/[[:space:]]/d' | wc -l
-  410  sort retweeted_ref_MID.tsv | grep -ve ‘^$’ | wc -l
-  411  sort retweeted_ref_MID.tsv | grep -e '^$' | wc -l
-  412  sort retweeted_ref_MID.tsv | sed -r '/^$/d' | wc -l
-  413  sort retweeted_ref_MID.tsv | sed -r '/^$/d' > sorted_alpha_retweeted_ref_MID.tsv
-  414  head sorted_alpha_retweeted_ref_MID.tsv
-  415  cat a4.txt
-  416  cut -f1,2 downloaded_tweets_extend_original_nolf2.tsv | head -n 4
-  417  cut -f1,2 downloaded_tweets_extend_original_nolf2.tsv > cut_col1-2_downloaded_original.tsv
-  418  head cut_col1-2_downloaded_original.tsv 
-  419  grep -f sorted_alpha_retweeted_ref_MID.tsv cut_col1-2_downloaded_original.tsv | head -n 4
-  420  fgrep -f sorted_alpha_retweeted_ref_MID.tsv cut_col1-2_downloaded_original.tsv | head -n 4
-  421  fgrep -f sorted_alpha_retweeted_ref_MID.tsv cut_col1-2_downloaded_original.tsv | wc -l
-  422  wc -l sorted_alpha_retweeted_ref_MID.tsv 
-  423  wc -l cut_col1-2_downloaded_original.tsv 
-  424  grep "type=replied" downloaded_tweets_extend_original_nolf2.tsv | wc -l
-  425  grep "type=retweeted" downloaded_tweets_extend_original_nolf2.tsv | wc -l
-  426  grep "type=retweeted" downloaded_tweets_extend_nolf2.tsv | wc -l
-  427  fgrep -f sorted_alpha_retweeted_ref_MID.tsv cut_col1-2_downloaded_original.tsv > > fgrep_retweeted_MID_original_MID_AID.tsv 
-  428  fgrep -f sorted_alpha_retweeted_ref_MID.tsv cut_col1-2_downloaded_original.tsv > fgrep_retweeted_MID_original_MID_AID.tsv 
-  429  wc -l fgrep_retweeted_MID_original_MID_AID.tsv 
-  430  head fgrep_retweeted_MID_original_MID_AID.tsv 
-  431  head -n 4 fgrep_retweeted_MID_original_MID_AID.tsv 
-  432  6199885836288457060718
-  433  1017456403961835520140496030
-  434  1023111834587607041202615056
-  435  grep '[vivian@sjsu A4]$ sort fgrep_retweeted_MID_original_MID_AID.tsv > sorted_fgrep_retweeted_MID_original_MID_AID.tsv
-  436  vivian@sjsu:~/A4[vivian@sjsu A4]$ 
-  437  vivian@sjsu:~/A4[vivian@sjsu A4]$ head -n 4 sorted_fgrep_retweeted_MID_original_MID_AID.tsv 
-  438  1004656199885836288457060718
-  439  1017456403961835520140496030
-  440  1023111834587607041202615056
-  441  1026437890731999232202615056
-  442  vivian@sjsu:~/A4[vivian@sjsu A4]$ 
-  443  vivian@sjsu:~/A4[vivian@sjsu A4]$ 
-  444  vivian@sjsu:~/A4[vivian@sjsu A4]$ join -t $'\t' -o1.1,2.2 sorted_alpha_retweeted_ref_MID.tsv sorted_fgrep_retweeted_MID_original_MID_AID.tsv | head -n 4
-  445  1004656199885836288457060718
-  446  1017456403961835520140496030
-  447  1023111834587607041202615056
-  448  1026437890731999232202615056
-  449  vivian@sjsu:~/A4[vivian@sjsu A4]$ 
-  450  vivian@sjsu:~/A4[vivian@sjsu A4]$ join -t $'\t' -o1.1,2.2 sorted_alpha_retweeted_ref_MID.tsv sorted_fgrep_retweeted_MID_original_MID_AID.tsv > joined_solpha_retweesoretw
-  451  vivian@sjsu:~/A4[vivian@sjsu A4]$ 
-  452  vivian@sjsu:~/A4[vivian@sjsu A4]$ cut -f2 joined_sorted_alpha_retweeted_sorted_fgrep_retw.tsv | sort | uniq -c | sort -nr | head -n 10 > top10_retweeted_AuthorIDs.tsv
-  453  vivian@sjsu:~/A4[vivian@sjsu A4]$ 
-  454  vivian@sjsu:~/A4[vivian@sjsu A4]$ 
-  455  vivian@sjsu:~/A4[vivian@sjsu A4]$ head top10_retweeted_AuthorIDs.tsv 
-  456     1076 18831926
-  457      438 1891490382
-  458      362 163018653
-  459      323 1495480590572961792
-  460      316 1219232377605644289
-  461      255 1231514832479948802
-  462      208 42836999
-  463      199 1229752606714728454
-  464      193 380648579
-  465      179 80802900
-  466  vivian@sjsu:~/A4[vivian@sjsu A4]$ 
-  467  grep "[vivian@sjsu A4]$ sort fgrep_retweeted_MID_original_MID_AID.tsv > sorted_fgrep_retweeted_MID_original_MID_AID.tsv"
-  468  cd A4
-  469  grep "18831926" downloaded_tweets_extend_original_nolf2.tsv  | wc -l
-  470  echo '0) Find the top 10 users who got retweeted the most from other users (for this you need both files, use fgrep)'
-  471  cut -f 2,5,6 downloaded_tweets_extend_nolf2.tsv | grep "type=retweeted" | sed -r 's/\[<ReferencedTweet id=([0-9]+) type=retweeted\]/\1/' | cut -f2 | sort | sed -r '/^$/d' > sorted_alpha_retweeted_ref_MID.tsv
-  472  exit
-  473  cd A4
-  474  ls
-  475  cat a4.txt
-  476  ls
-  477  cat a4.1.txt
-  478  tmux attach -t a4
-  479  head -n 4 downloaded_tweets_extend_nolf2.tsv 
-  480  cut -f2,4,5 downloaded_tweets_extend_nolf2.tsv | grep "type=retweeted" | sed -r 's/\[<ReferencedTweet id=([0-9]+) type=retweeted\]/\1/' | head -n 4
-  481  cut -f2,4,5 downloaded_tweets_extend_nolf2.tsv | grep "type=retweeted" | sed -r 's/\[<ReferencedTweet id=([0-9]+) type=retweeted\]/\1/' | cut -f1 | sort | uniq -c | sort -nr | awk '{if ($1>=3) print $0}' | sort | uniq -c | sort -nr | head -n 10
-  482  cut -f2,4,5 downloaded_tweets_extend_nolf2.tsv | grep "type=retweeted" | sed -r 's/\[<ReferencedTweet id=([0-9]+) type=retweeted\]/\1/' | head
-  483  cut -f2,4,5 downloaded_tweets_extend_nolf2.tsv | grep "type=retweeted" | sed -r 's/\[<ReferencedTweet id=([0-9]+) type=retweeted\]/\1/' | sort -k3 | head 
-  484  tmux attach -t a4
-  485  tail -n +2 a4q1.tsv | cut -f1 | sort | uniq -c | sort -nr | awk '{if ($1>=3) print $0}' | head -n 10
-  486  cut -f2,4,5 downloaded_tweets_extend_nolf2.tsv | grep "type=retweeted" | sed -r 's/\[<ReferencedTweet id=([0-9]+) type=retweeted\]/\1/' | head 
-  487  cut -f2,4,5 downloaded_tweets_extend_nolf2.tsv | grep "type=retweeted" | sed -r 's/\[<ReferencedTweet id=([0-9]+) type=retweeted\]/\1/' > cutf245_typeRetweeted_sedRegex_downloaded_extend.tsv
-  488  cutf245_typeRetweeted_sedRegex_downloaded_extend.tsv
-  489  head cutf245_typeRetweeted_sedRegex_downloaded_extend.tsv
-  490  tail -n +2 a4q1.tsv | cut -f1 | sort | uniq -c | sort -nr | awk '{if ($1>=3) print $0}' | head -n 30
-  491  tmux attach-session -t a4
-  492  tail -n +2 a4q1.tsv | cut -f1 | sort | uniq -c | sort -nr | awk '{if ($1>=3) print $0}' | cut -f2 | head
-  493  tail -n +2 a4q1.tsv | cut -f1 | sort | uniq -c | sort -nr | awk '{if ($1>=3) print $0}' | awk '{print $1"\t"$2}' | head 
-  494  tail -n +2 a4q1.tsv | cut -f1 | sort | uniq -c | sort -nr | awk '{if ($1>=3) print $0}' | awk '{print $1"\t"$2}' | cut -k2 | head
-  495  tail -n +2 a4q1.tsv | cut -f1 | sort | uniq -c | sort -nr | awk '{if ($1>=3) print $0}' | awk '{print $1"\t"$2}' | cut -f2 | head
-  496  tail -n +2 a4q1.tsv | cut -f1 | sort | uniq -c | sort -nr | awk '{if ($1>=3) print $0}' | awk '{print $1"\t"$2}' | cut -f2 | head -n 30
-  497  tail -n +2 a4q1.tsv | cut -f1 | sort | uniq -c | sort -nr | awk '{if ($1>=3) print $0}' | awk '{print $1"\t"$2}' | cut -f2 | head -n 30 | wc -l
-  498  tail -n +2 a4q1.tsv | cut -f1 | sort | uniq -c | sort -nr | awk '{if ($1>=3) print $0}' | awk '{print $1"\t"$2}' | head -n 30
-  499  tmux attach-session -t a4
-  500  head -n 4 downloaded_tweets_extend_original_nolf2.tsv 
-  501  tmux attach-session -t a4
-  502  cd
-  503  ls
-  504  cd
-  505  cd A2
-  506  ls
-  507  cat a2.txt
-  508  cut -f4 downloaded_tweets_extend_nolf2.tsv | tr ',' '\n' | tr '"' '\n' | tr '[:upper:]' '[:lower:]' | grep . | sort | uniq -c | sort -nr | head -n 30
-  509  cut -f4 ../A4/downloaded_tweets_extend_nolf2.tsv | tr ',' '\n' | tr '"' '\n' | tr '[:upper:]' '[:lower:]' | grep . | sort | uniq -c | sort -nr | head -n 30
-  510  cd 
-  511  cd A4
-  512  ls
-  513  cat file2
-  514  cat file1
-  515  rm file*
-  516  ls
-  517  cd 
-  518  history | grep "$1!=$6"
-  519  awk -F "\t" '{ if ($2 != $7) print $4 }' A4/downloaded_tweets_extend_formatted.tsv  | sort | uniq -c | sort -nr | head -n 30
-  520  ls
-  521  cd A4
-  522  cd
-  523  cd A6
-  524  cd A4
-  525  ls
-  526  awk -F "\t" '{ if ($2 != $7) print $4 }' downloaded_tweets_extend_no sort | uniq -c | sort -nr | head -n 30
-  527  grep "downloaded_tweets_extend_nolf2_NOBOT.tsv"
-  528  cd 
-  529  find . -type -name "downloaded_tweets_extend_nolf2_NOBOT.tsv"
-  530  find ./ -type f -name "downloaded_tweets_extend_nolf2_NOBOT.tsv"
-  531  fgrep -f ../A2/q5A2_top30_hashtags.tsv -vw Q4_30_hashtags.tsv > Q4_diff.tsv
-  532  ls
-  533  cd A4
-  534  ls
-  535  fgrep -f ../A2/q5A2_top30_hashtags.tsv -vw a4q4_top_30_retweet_hashtags.tsv > a4q4_diff.tsv
-  536  cat a4q4_diff.tsv 
-  537  tmux attach -t a4
-  538  greo fgrep_orig-AuthorIDs-gotRetweets-3Rgreater_downloadOrig_awkPrint_origMIDs.tsv history | more
-  539  grep fgrep_orig-AuthorIDs-gotRetweets-3Rgreater_downloadOrig_awkPrint_origMIDs.tsv history | more
-  540  history | grep fgrep_orig-AuthorIDs-gotRetweets-3Rgreater_downloadOrig_awkPrint_origMIDs.tsv | more
-  541  tmux attach-session -t a4
-  542  fgrep -f fgrep_orig-AuthorIDs-gotRetweets-3Rgreater_downloadOrig_awkPrint_origMIDs.tsv cutf245_typeRetweeted_sedRegex_downloaded_extend.tsv | head  
-  543  ls
-  544  find ./ -type -name "a4q4_original_AuthorIDs_gotRetweets-3xORgreater"
-  545  find ./ -type f -name "a4q4_original_AuthorIDs_gotRetweets-3xORgreater.tsv"
-  546  find ./ -type f -name "tail -n +2 a4q1.tsv | cut -f1 | sort | uniq -c | sort -nr | awk '{if ($1>=3) print $0}' "
-  547  find ./ -type f -name "tail -n +2 a4q1.tsv"
-  548  cd
-  549  find ./ -type f -name "tail -n +2 a4q1.tsv"
-  550  tail -n +2 a4q1.tsv | cut -f1 | sort | uniq -c | sort -nr | awk '{if ($1>=3) print $0}' | head
-  551  cd A4
-  552  tail -n +2 a4q1.tsv | cut -f1 | sort | uniq -c | sort -nr | awk '{if ($1>=3) print $0}' | head
-  553  tail -n +2 a4q1.tsv | cut -f1 | sort | uniq -c | sort -nr | awk '{if ($1>=3) print $2}' | 
-  554  tail -n +2 a4q1.tsv | cut -f1 | sort | uniq -c | sort -nr | awk '{if ($1>=3) print $2}' | head
-  555  head fgrep_orig-AuthorIDs-gotRetweets-3Rgreater_downloadOrig_awkPrint_origMIDs.tsv
-  556  head fgrep_orig-AuthorIDs-gotRetweets-3Rgreater_downloadOrig_awkPrint_origMIDs.tsv > testtest.tsv
-  557  fgrep -f testtest.tsv downloaded_tweets_extend_original_nolf2.tsv | head
-  558  fgrep -f testtest.tsv downloaded_tweets_extend_original_nolf2.tsv | cut -f1 | head
-  559  ls -l
-  560  head a4q4_original_AuthorIDs_gotRetweets-3xORgreater.txt
-  561  head testtest.tsv 
-  562  tail -n +2 a4q1.tsv | cut -f1 | sort | uniq -c | sort -nr | awk '{if ($1>=3) print $2}' | head
-  563  tail -n +2 a4q1.tsv | cut -f1 | sort | uniq -c | sort -nr | awk '{if ($1>=3) print $2}' > testtest2.tsv
-  564  fgrep -f testtest2.tsv downloaded_tweets_extend_original_nolf2.tsv | cut -f1 | head
-  565  tail testtest2.tsv
-  566  tail  a4q4_original_AuthorIDs_gotRetweets-3xORgreater.txt
-  567  head a4q4_original_AuthorIDs_gotRetweets-3xORgreater.txt
-  568  tail -n +2 a4q1.tsv | cut -f1 | sort | uniq -c | sort -nr | awk '{if ($1>=3) print $2}' > a4q4_original_AuthorIDs_gotRetweets-3xORgreater.txt
-  569  head a4q4_original_AuthorIDs_gotRetweets-3xORgreater.txt
-  570  fgrep -f  a4q4_original_AuthorIDs_gotRetweets-3xORgreater.txt downloaded_tweets_extend_original_nolf2.tsv | cut -f1 | head
-  571  head fgrep_orig-AuthorIDs-gotRetweets-3Rgreater_downloadOrig_awkPrint_origMIDs.tsv
-  572  fgrep -f  a4q4_original_AuthorIDs_gotRetweets-3xORgreater.txt downloaded_tweets_extend_original_nolf2.tsv | cut -f1 > fgrep_orig-AuthorIDs-gotRetweets-3Rgreater_downloadOrig_awkPrint_origMIDs.tsv cutf245_typeRetweeted_sedRegex_downloaded_extend.tsv
-  573  head fgrep_orig-AuthorIDs-gotRetweets-3Rgreater_downloadOrig_awkPrint_origMIDs.tsv
-  574  fgrep -f a4q4_original_AuthorIDs_gotRetweets-3xORgreater.txt downloaded_tweets_extend_original_nolf2.tsv | cut -f1 > fgrep_orig-AuthorIDs-gotRetweets-3Rgreater_downloadOrig_awkPrint_origMIDs.tsv
-  575  head fgrep_orig-AuthorIDs-gotRetweets-3Rgreater_downloadOrig_awkPrint_origMIDs.tsv
-  576  ls -l
-  577  cut -f2,5 downloaded_tweets_extend_nolf2.tsv | grep "type=retweeted" | sed -r 's/\[<ReferencedTweet id=([0-9]+) type=retweeted\]/\1/' | sort -k2 > sorted_cutf25_grep_retweeted_sedRegex_downloaded_extend.tsv
-  578  cut -f2,4,5 downloaded_tweets_extend_nolf2.tsv | grep "type=retweeted" | sed -r 's/\[<ReferencedTweet id=([0-9]+) type=retweeted\]/\1/' | sort -k2 | head
-  579  cut -f2,4,5 downloaded_tweets_extend_nolf2.tsv | grep "type=retweeted" | sed -r 's/\[<ReferencedTweet id=([0-9]+) type=retweeted\]/\1/' | head
-  580  head cutf245_typeRetweeted_sedRegex_downloaded_extend.tsv
-  581  cut -f2,4,5 downloaded_tweets_extend_nolf2.tsv | grep "type=retweeted" | sed -r 's/\[<ReferencedTweet id=([0-9]+) type=retweeted\]/\1/' > cutf245_typeRetweeted_sedRegex_downloaded_extend.tsv
-  582  head cutf245_typeRetweeted_sedRegex_downloaded_extend.tsv
-  583  history > cmds.log
-  584  cd A4
-  585  ls
-  586  grep 711608180535640064 downloaded_tweets_extend_nolf2.tsv | head
-  587  grep 711608180535640064 downloaded_tweets_extend_nolf2.tsv | more
-  588  wc -l downloaded_tweets_extend_nolf2.tsv 
-  589  ls -l
-  590  ls -l | grep alpha
-  591  wc -l sorted_alpha_retweeted_ref_MID.tsv
-  592  wc -l fgrep_retweeted_MID_original_MID_AID.tsv
-  593  vi MESSAGE_ID
-  594  vi file2
-  595  mv MESSAGE_ID
-  596  mv MESSAGE_ID file1
-  597  vi file1
-  598  cat file1
-  599  cat file2
-  600  fgrep file1 file2
-  601  fgrep -f file1 fiel2
-  602  fgrep -f file1 file2
-  603  fgrep -f file1 file2 | wc -l
-  604  vi file2
-  605  cat file1
-  606  cat file2
-  607  fgrep -f file1 file2
-  608  fgrep -f file1 file2 > fgrep_results
-  609  join -t $'\t' file1 fgrep_results | cut -k2 | tail -n +2 | uniq -c 
-  610  join -t $'\t' file1 fgrep_results | cut -f2 | tail -n +2 | uniq -c 
-  611  cat fgrep_results | cut -f2 | tail -n +2 | uniq -c 
-  612  ls
-  613  cat a4.txt
+   29  head cutf25_grep_retweeted_sedRegex_downloaded_extend.tsv 
+   30  sort -k2 cutf25_grep_retweeted_sedRegex_downloaded_extend.tsv > sorted_cutf25_grep_retweeted_sedRegex_downloaded_extend.tsv
+   31  head -n 5 sorted_cutf25_grep_retweeted_sedRegex_downloaded_extend.tsv 
+   32  fgrep -f retweeted_ref_MID.tsv | cut -f1,2 downloaded_tweets_extend_original_nolf2.tsv > fgrep_result_MID_authorID_original.tsv
+   33  l
+   34  join -t $'\t' -1 2 -o2.2,1.1 sorted_cutf25_grep_retweeted_sedRegex_downloaded_extend.tsv sorted_fgrep_retweeted_MID_original_MID_AID.tsv | awk 'BEGIN {print "A_ID\tB_ID"} {print $0}' > a4q1.tsv
+   35  head a4q1.tsv 
+   36  tail -n +2 a4q1.tsv | cut -f1 | sort | uniq -c | sort -nr | awk '{if ($1>=3) print $1}' | sort | uniq -c | sort -nr > a4q2.tsv
+   37  head a4q2.tsv
+   38  awk '{print $1\t$2}' a4q2 | sort -k2 -n | head -n 10
+   39  awk '{print $1"\t"$2}' a4q2 | sort -k2 -n | head -n 10
+   40  awk '{print $1"\t"$2}' a4q2.tsv | sort -k2 -n | head -n 10
+   41  awk '{print $1"\t"$2}' a4q2.tsv | sort -k2 -n | tail -20
+   42  ls -ltrh
+   43  awk '{print $1"\t"$2}' a4q2.tsv | sort -k2 -n > sorted_a4q2.tsv 
+   44  head sorted_a4q2.tsv 
+   45  head -60 sorted_a4q2.tsv 
+   46  head -60 sorted_a4q2.tsv > 60_bars_only_head60_sorted_a4q2.tsv
+   47  ../gnuplot
+   48  exit
+   49  cd A4
+   50  ls
+   51  cat a4q1.tsv
+   52  ls
+   53  tmux attach -t a4
+   54  ls
+   55  cd
+   56  ls
+   57  cat a4.txt
+   58  ls
+   59  cat a4.1.txt
+   60  ls
+   61  mv a4.1.txt A4
+   62  mv a4.txt A4
+   63  ls
+   64  cd A4
+   65  tmux attach -t a4
+   66   cut -f 2,5,6 downloaded_tweets_extend_nolf2.tsv | grep "type=retweeted" | sed -r 's/\[<ReferencedTweet id=([0-9]+) type=retwee                  -n 4                                      
+   67  ut -f 2,5,6 ../downloaded_tweets_extend_nolf2.tsv | grep "type=retweeted" | sed -r 's/\[<ReferencedTweet id=([0-9]+) type=retweeted\]/\1/' | head -n 5
+   68  cd A4
+   69  cut -f 2,5,6 ../downloaded_tweets_extend_nolf2.tsv | grep "type=retweeted" | sed -r 's/\[<ReferencedTweet id=([0-9]+) type=retweeted\]/\1/' | head -n 4
+   70  ls
+   71  cut -f 2,5,6 downloaded_tweets_extend_nolf2.tsv | grep "type=retweeted" | sed -r 's/\[<ReferencedTweet id=([0-9]+) type=retweeted\]/\1/' | head -n 4
+   72  cut -1,2 downloaded_tweets_extend_original_nolf2.tsv | fgrep -f retweeted_ref_MID.tsv | head -n 4
+   73  cut -f1,2 downloaded_tweets_extend_original_nolf2.tsv | fgrep -f retweeted_ref_MID.tsv | head -n 4
+   74  cut -f1,2 downloaded_tweets_extend_original_nolf2.tsv | fgrep -f retweeted_ref_MID.tsv | wc -l
+   75  sort retweeted_ref_MID.tsv | head -n 4
+   76  sort retweeted_ref_MID.tsv | wc -l
+   77  sort retweeted_ref_MID.tsv | sed 's/^$/ d' | wc -l
+   78  sort retweeted_ref_MID.tsv | sed -r 's/\s*/ | wc -l
+   79  sort retweeted_ref_MID.tsv | sed -r 's/^\s*/ | wc -l
+   80  sort retweeted_ref_MID.tsv | sed -r '/^\s*/ | wc -l
+   81  sort retweeted_ref_MID.tsv | sed -r '/^\s*/d | wc -l
+   82  sort retweeted_ref_MID.tsv | sed -r '/^\s*/d' | wc -l
+   83  sort retweeted_ref_MID.tsv | sed -r '/[[:space:]]/d' | wc -l
+   84  sort retweeted_ref_MID.tsv | grep -ve ‘^$’ | wc -l
+   85  sort retweeted_ref_MID.tsv | grep -e '^$' | wc -l
+   86  sort retweeted_ref_MID.tsv | sed -r '/^$/d' | wc -l
+   87  sort retweeted_ref_MID.tsv | sed -r '/^$/d' > sorted_alpha_retweeted_ref_MID.tsv
+   88  head sorted_alpha_retweeted_ref_MID.tsv
+   89  cat a4.txt
+   90  cut -f1,2 downloaded_tweets_extend_original_nolf2.tsv | head -n 4
+   91  cut -f1,2 downloaded_tweets_extend_original_nolf2.tsv > cut_col1-2_downloaded_original.tsv
+   92  head cut_col1-2_downloaded_original.tsv 
+   93  grep -f sorted_alpha_retweeted_ref_MID.tsv cut_col1-2_downloaded_original.tsv | head -n 4
+   94  fgrep -f sorted_alpha_retweeted_ref_MID.tsv cut_col1-2_downloaded_original.tsv | head -n 4
+   95  fgrep -f sorted_alpha_retweeted_ref_MID.tsv cut_col1-2_downloaded_original.tsv | wc -l
+   96  wc -l sorted_alpha_retweeted_ref_MID.tsv 
+   97  wc -l cut_col1-2_downloaded_original.tsv 
+   98  grep "type=replied" downloaded_tweets_extend_original_nolf2.tsv | wc -l
+   99  grep "type=retweeted" downloaded_tweets_extend_original_nolf2.tsv | wc -l
+  100  grep "type=retweeted" downloaded_tweets_extend_nolf2.tsv | wc -l
+  101  fgrep -f sorted_alpha_retweeted_ref_MID.tsv cut_col1-2_downloaded_original.tsv > > fgrep_retweeted_MID_original_MID_AID.tsv 
+  102  fgrep -f sorted_alpha_retweeted_ref_MID.tsv cut_col1-2_downloaded_original.tsv > fgrep_retweeted_MID_original_MID_AID.tsv 
+  103  wc -l fgrep_retweeted_MID_original_MID_AID.tsv 
+  104  head fgrep_retweeted_MID_original_MID_AID.tsv 
+  105  head -n 4 fgrep_retweeted_MID_original_MID_AID.tsv 
+  106  6199885836288457060718
+  107  1017456403961835520140496030
+  108  1023111834587607041202615056
+  109  grep '[vivian@sjsu A4]$ sort fgrep_retweeted_MID_original_MID_AID.tsv > sorted_fgrep_retweeted_MID_original_MID_AID.tsv
+  110  vivian@sjsu:~/A4[vivian@sjsu A4]$ 
+  111  vivian@sjsu:~/A4[vivian@sjsu A4]$ head -n 4 sorted_fgrep_retweeted_MID_original_MID_AID.tsv 
+  112  1004656199885836288457060718
+  113  1017456403961835520140496030
+  114  1023111834587607041202615056
+  115  1026437890731999232202615056
+  116  vivian@sjsu:~/A4[vivian@sjsu A4]$ 
+  117  vivian@sjsu:~/A4[vivian@sjsu A4]$ 
+  118  vivian@sjsu:~/A4[vivian@sjsu A4]$ join -t $'\t' -o1.1,2.2 sorted_alpha_retweeted_ref_MID.tsv sorted_fgrep_retweeted_MID_original_MID_AID.tsv | head -n 4
+  119  1004656199885836288457060718
+  120  1017456403961835520140496030
+  121  1023111834587607041202615056
+  122  1026437890731999232202615056
+  123  vivian@sjsu:~/A4[vivian@sjsu A4]$ 
+  124  vivian@sjsu:~/A4[vivian@sjsu A4]$ join -t $'\t' -o1.1,2.2 sorted_alpha_retweeted_ref_MID.tsv sorted_fgrep_retweeted_MID_original_MID_AID.tsv > joined_solpha_retweesoretw
+  125  vivian@sjsu:~/A4[vivian@sjsu A4]$ 
+  126  vivian@sjsu:~/A4[vivian@sjsu A4]$ cut -f2 joined_sorted_alpha_retweeted_sorted_fgrep_retw.tsv | sort | uniq -c | sort -nr | head -n 10 > top10_retweeted_AuthorIDs.tsv
+  127  vivian@sjsu:~/A4[vivian@sjsu A4]$ 
+  128  vivian@sjsu:~/A4[vivian@sjsu A4]$ 
+  129  vivian@sjsu:~/A4[vivian@sjsu A4]$ head top10_retweeted_AuthorIDs.tsv 
+  130     1076 18831926
+  131      438 1891490382
+  132      362 163018653
+  133      323 1495480590572961792
+  134      316 1219232377605644289
+  135      255 1231514832479948802
+  136      208 42836999
+  137      199 1229752606714728454
+  138      193 380648579
+  139      179 80802900
+  140  vivian@sjsu:~/A4[vivian@sjsu A4]$ 
+  141  grep "[vivian@sjsu A4]$ sort fgrep_retweeted_MID_original_MID_AID.tsv > sorted_fgrep_retweeted_MID_original_MID_AID.tsv"
+  142  cd A4
+  143  grep "18831926" downloaded_tweets_extend_original_nolf2.tsv  | wc -l
+  144  echo '0) Find the top 10 users who got retweeted the most from other users (for this you need both files, use fgrep)'
+  145  cut -f 2,5,6 downloaded_tweets_extend_nolf2.tsv | grep "type=retweeted" | sed -r 's/\[<ReferencedTweet id=([0-9]+) type=retweeted\]/\1/' | cut -f2 | sort | sed -r '/^$/d' > sorted_alpha_retweeted_ref_MID.tsv
+  146  exit
+  147  cd A4
+  148  ls
+  149  cat a4.txt
+  150  ls
+  151  cat a4.1.txt
+  152  tmux attach -t a4
+  153  head -n 4 downloaded_tweets_extend_nolf2.tsv 
+  154  cut -f2,4,5 downloaded_tweets_extend_nolf2.tsv | grep "type=retweeted" | sed -r 's/\[<ReferencedTweet id=([0-9]+) type=retweeted\]/\1/' | head -n 4
+  155  cut -f2,4,5 downloaded_tweets_extend_nolf2.tsv | grep "type=retweeted" | sed -r 's/\[<ReferencedTweet id=([0-9]+) type=retweeted\]/\1/' | cut -f1 | sort | uniq -c | sort -nr | awk '{if ($1>=3) print $0}' | sort | uniq -c | sort -nr | head -n 10
+  156  cut -f2,4,5 downloaded_tweets_extend_nolf2.tsv | grep "type=retweeted" | sed -r 's/\[<ReferencedTweet id=([0-9]+) type=retweeted\]/\1/' | head
+  157  cut -f2,4,5 downloaded_tweets_extend_nolf2.tsv | grep "type=retweeted" | sed -r 's/\[<ReferencedTweet id=([0-9]+) type=retweeted\]/\1/' | sort -k3 | head 
+  158  tmux attach -t a4
+  159  tail -n +2 a4q1.tsv | cut -f1 | sort | uniq -c | sort -nr | awk '{if ($1>=3) print $0}' | head -n 10
+  160  cut -f2,4,5 downloaded_tweets_extend_nolf2.tsv | grep "type=retweeted" | sed -r 's/\[<ReferencedTweet id=([0-9]+) type=retweeted\]/\1/' | head 
+  161  cut -f2,4,5 downloaded_tweets_extend_nolf2.tsv | grep "type=retweeted" | sed -r 's/\[<ReferencedTweet id=([0-9]+) type=retweeted\]/\1/' > cutf245_typeRetweeted_sedRegex_downloaded_extend.tsv
+  162  cutf245_typeRetweeted_sedRegex_downloaded_extend.tsv
+  163  head cutf245_typeRetweeted_sedRegex_downloaded_extend.tsv
+  164  tail -n +2 a4q1.tsv | cut -f1 | sort | uniq -c | sort -nr | awk '{if ($1>=3) print $0}' | head -n 30
+  165  tmux attach-session -t a4
+  166  tail -n +2 a4q1.tsv | cut -f1 | sort | uniq -c | sort -nr | awk '{if ($1>=3) print $0}' | cut -f2 | head
+  167  tail -n +2 a4q1.tsv | cut -f1 | sort | uniq -c | sort -nr | awk '{if ($1>=3) print $0}' | awk '{print $1"\t"$2}' | head 
+  168  tail -n +2 a4q1.tsv | cut -f1 | sort | uniq -c | sort -nr | awk '{if ($1>=3) print $0}' | awk '{print $1"\t"$2}' | cut -k2 | head
+  169  tail -n +2 a4q1.tsv | cut -f1 | sort | uniq -c | sort -nr | awk '{if ($1>=3) print $0}' | awk '{print $1"\t"$2}' | cut -f2 | head
+  170  tail -n +2 a4q1.tsv | cut -f1 | sort | uniq -c | sort -nr | awk '{if ($1>=3) print $0}' | awk '{print $1"\t"$2}' | cut -f2 | head -n 30
+  171  tail -n +2 a4q1.tsv | cut -f1 | sort | uniq -c | sort -nr | awk '{if ($1>=3) print $0}' | awk '{print $1"\t"$2}' | cut -f2 | head -n 30 | wc -l
+  172  tail -n +2 a4q1.tsv | cut -f1 | sort | uniq -c | sort -nr | awk '{if ($1>=3) print $0}' | awk '{print $1"\t"$2}' | head -n 30
+  173  tmux attach-session -t a4
+  174  head -n 4 downloaded_tweets_extend_original_nolf2.tsv 
+  175  tmux attach-session -t a4
+  176  cd
+  177  ls
+  178  cd
+  179  cd A2
+  180  ls
+  181  cat a2.txt
+  182  cut -f4 downloaded_tweets_extend_nolf2.tsv | tr ',' '\n' | tr '"' '\n' | tr '[:upper:]' '[:lower:]' | grep . | sort | uniq -c | sort -nr | head -n 30
+  183  cut -f4 ../A4/downloaded_tweets_extend_nolf2.tsv | tr ',' '\n' | tr '"' '\n' | tr '[:upper:]' '[:lower:]' | grep . | sort | uniq -c | sort -nr | head -n 30
+  184  cd 
+  185  cd A4
+  186  ls
+  187  cat file2
+  188  cat file1
+  189  rm file*
+  190  ls
+  191  cd 
+  192  history | grep "$1!=$6"
+  193  awk -F "\t" '{ if ($2 != $7) print $4 }' A4/downloaded_tweets_extend_formatted.tsv  | sort | uniq -c | sort -nr | head -n 30
+  194  ls
+  195  cd A4
+  196  cd
+  197  cd A6
+  198  cd A4
+  199  ls
+  200  awk -F "\t" '{ if ($2 != $7) print $4 }' downloaded_tweets_extend_no sort | uniq -c | sort -nr | head -n 30
+  201  grep "downloaded_tweets_extend_nolf2_NOBOT.tsv"
+  202  cd 
+  203  find . -type -name "downloaded_tweets_extend_nolf2_NOBOT.tsv"
+  204  find ./ -type f -name "downloaded_tweets_extend_nolf2_NOBOT.tsv"
+  205  fgrep -f ../A2/q5A2_top30_hashtags.tsv -vw Q4_30_hashtags.tsv > Q4_diff.tsv
+  206  ls
+  207  cd A4
+  208  ls
+  209  fgrep -f ../A2/q5A2_top30_hashtags.tsv -vw a4q4_top_30_retweet_hashtags.tsv > a4q4_diff.tsv
+  210  cat a4q4_diff.tsv 
+  211  tmux attach -t a4
+  212  greo fgrep_orig-AuthorIDs-gotRetweets-3Rgreater_downloadOrig_awkPrint_origMIDs.tsv history | more
+  213  grep fgrep_orig-AuthorIDs-gotRetweets-3Rgreater_downloadOrig_awkPrint_origMIDs.tsv history | more
+  214  history | grep fgrep_orig-AuthorIDs-gotRetweets-3Rgreater_downloadOrig_awkPrint_origMIDs.tsv | more
+  215  tmux attach-session -t a4
+  216  fgrep -f fgrep_orig-AuthorIDs-gotRetweets-3Rgreater_downloadOrig_awkPrint_origMIDs.tsv cutf245_typeRetweeted_sedRegex_downloaded_extend.tsv | head  
+  217  ls
+  218  find ./ -type -name "a4q4_original_AuthorIDs_gotRetweets-3xORgreater"
+  219  find ./ -type f -name "a4q4_original_AuthorIDs_gotRetweets-3xORgreater.tsv"
+  220  find ./ -type f -name "tail -n +2 a4q1.tsv | cut -f1 | sort | uniq -c | sort -nr | awk '{if ($1>=3) print $0}' "
+  221  find ./ -type f -name "tail -n +2 a4q1.tsv"
+  222  cd
+  223  find ./ -type f -name "tail -n +2 a4q1.tsv"
+  224  tail -n +2 a4q1.tsv | cut -f1 | sort | uniq -c | sort -nr | awk '{if ($1>=3) print $0}' | head
+  225  cd A4
+  226  tail -n +2 a4q1.tsv | cut -f1 | sort | uniq -c | sort -nr | awk '{if ($1>=3) print $0}' | head
+  227  tail -n +2 a4q1.tsv | cut -f1 | sort | uniq -c | sort -nr | awk '{if ($1>=3) print $2}' | 
+  228  tail -n +2 a4q1.tsv | cut -f1 | sort | uniq -c | sort -nr | awk '{if ($1>=3) print $2}' | head
+  229  head fgrep_orig-AuthorIDs-gotRetweets-3Rgreater_downloadOrig_awkPrint_origMIDs.tsv
+  230  head fgrep_orig-AuthorIDs-gotRetweets-3Rgreater_downloadOrig_awkPrint_origMIDs.tsv > testtest.tsv
+  231  fgrep -f testtest.tsv downloaded_tweets_extend_original_nolf2.tsv | head
+  232  fgrep -f testtest.tsv downloaded_tweets_extend_original_nolf2.tsv | cut -f1 | head
+  233  ls -l
+  234  head a4q4_original_AuthorIDs_gotRetweets-3xORgreater.txt
+  235  head testtest.tsv 
+  236  tail -n +2 a4q1.tsv | cut -f1 | sort | uniq -c | sort -nr | awk '{if ($1>=3) print $2}' | head
+  237  tail -n +2 a4q1.tsv | cut -f1 | sort | uniq -c | sort -nr | awk '{if ($1>=3) print $2}' > testtest2.tsv
+  238  fgrep -f testtest2.tsv downloaded_tweets_extend_original_nolf2.tsv | cut -f1 | head
+  239  tail testtest2.tsv
+  240  tail  a4q4_original_AuthorIDs_gotRetweets-3xORgreater.txt
+  241  head a4q4_original_AuthorIDs_gotRetweets-3xORgreater.txt
+  242  tail -n +2 a4q1.tsv | cut -f1 | sort | uniq -c | sort -nr | awk '{if ($1>=3) print $2}' > a4q4_original_AuthorIDs_gotRetweets-3xORgreater.txt
+  243  head a4q4_original_AuthorIDs_gotRetweets-3xORgreater.txt
+  244  fgrep -f  a4q4_original_AuthorIDs_gotRetweets-3xORgreater.txt downloaded_tweets_extend_original_nolf2.tsv | cut -f1 | head
+  245  head fgrep_orig-AuthorIDs-gotRetweets-3Rgreater_downloadOrig_awkPrint_origMIDs.tsv
+  246  fgrep -f  a4q4_original_AuthorIDs_gotRetweets-3xORgreater.txt downloaded_tweets_extend_original_nolf2.tsv | cut -f1 > fgrep_orig-AuthorIDs-gotRetweets-3Rgreater_downloadOrig_awkPrint_origMIDs.tsv cutf245_typeRetweeted_sedRegex_downloaded_extend.tsv
+  247  head fgrep_orig-AuthorIDs-gotRetweets-3Rgreater_downloadOrig_awkPrint_origMIDs.tsv
+  248  fgrep -f a4q4_original_AuthorIDs_gotRetweets-3xORgreater.txt downloaded_tweets_extend_original_nolf2.tsv | cut -f1 > fgrep_orig-AuthorIDs-gotRetweets-3Rgreater_downloadOrig_awkPrint_origMIDs.tsv
+  249  head fgrep_orig-AuthorIDs-gotRetweets-3Rgreater_downloadOrig_awkPrint_origMIDs.tsv
+  250  ls -l
+  251  cut -f2,5 downloaded_tweets_extend_nolf2.tsv | grep "type=retweeted" | sed -r 's/\[<ReferencedTweet id=([0-9]+) type=retweeted\]/\1/' | sort -k2 > sorted_cutf25_grep_retweeted_sedRegex_downloaded_extend.tsv
+  252  cut -f2,4,5 downloaded_tweets_extend_nolf2.tsv | grep "type=retweeted" | sed -r 's/\[<ReferencedTweet id=([0-9]+) type=retweeted\]/\1/' | sort -k2 | head
+  253  cut -f2,4,5 downloaded_tweets_extend_nolf2.tsv | grep "type=retweeted" | sed -r 's/\[<ReferencedTweet id=([0-9]+) type=retweeted\]/\1/' | head
+  254  head cutf245_typeRetweeted_sedRegex_downloaded_extend.tsv
+  255  cut -f2,4,5 downloaded_tweets_extend_nolf2.tsv | grep "type=retweeted" | sed -r 's/\[<ReferencedTweet id=([0-9]+) type=retweeted\]/\1/' > cutf245_typeRetweeted_sedRegex_downloaded_extend.tsv
+  256  head cutf245_typeRetweeted_sedRegex_downloaded_extend.tsv
+  257  history > cmds.log
+  258  cd A4
+  259  ls
+  260  grep 711608180535640064 downloaded_tweets_extend_nolf2.tsv | head
+  261  grep 711608180535640064 downloaded_tweets_extend_nolf2.tsv | more
+  262  wc -l downloaded_tweets_extend_nolf2.tsv 
+  263  ls -l
+  264  ls -l | grep alpha
+  265  wc -l sorted_alpha_retweeted_ref_MID.tsv
+  266  wc -l fgrep_retweeted_MID_original_MID_AID.tsv
+  267  vi MESSAGE_ID
+  268  vi file2
+  269  mv MESSAGE_ID
+  270  mv MESSAGE_ID file1
+  271  vi file1
+  272  cat file1
+  273  cat file2
+  274  fgrep file1 file2
+  275  fgrep -f file1 fiel2
+  276  fgrep -f file1 file2
+  277  fgrep -f file1 file2 | wc -l
+  278  vi file2
+  279  cat file1
+  280  cat file2
+  281  fgrep -f file1 file2
+  282  fgrep -f file1 file2 > fgrep_results
+  283  join -t $'\t' file1 fgrep_results | cut -k2 | tail -n +2 | uniq -c 
+  284  join -t $'\t' file1 fgrep_results | cut -f2 | tail -n +2 | uniq -c 
+  285  cat fgrep_results | cut -f2 | tail -n +2 | uniq -c 
+  286  ls
+  287  cat a4.txt
+  288  ls
+  289  cut -f 2,5,6 downloaded_tweets_extend_nolf2.tsv | grep "type=retweeted" | sed -r 's/\[<ReferencedTweet id=([0-9]+) type=retweeted\]/\1/' | cut -f2 | sort | sed -r '/^$/d' | head
+  290  cut -f 2,5,6 downloaded_tweets_extend_nolf2.tsv 
+  291  cut -f 2,5,6 downloaded_tweets_extend_nolf2.tsv | head
+  292  cut -f 2,5,6 downloaded_tweets_extend_nolf2.tsv | grep "type=retweeted" | sed -r 's/\[<ReferencedTweet id=([0-9]+) type=retweeted\]/\1/' | head
+  293  cut -f 2,5,6 downloaded_tweets_extend_nolf2.tsv | grep "type=retweeted" | sed -r 's/\[<ReferencedTweet id=([0-9]+) type=retweeted\]/\1/' | cut -f2
+  294  cut -f 2,5,6 downloaded_tweets_extend_nolf2.tsv | grep "type=retweeted" | sed -r 's/\[<ReferencedTweet id=([0-9]+) type=retweeted\]/\1/' | cut -f2 | head
+  295  cut -f 2,5,6 downloaded_tweets_extend_nolf2.tsv | grep "type=retweeted" | sed -r 's/\[<ReferencedTweet id=([0-9]+) type=retweeted\]/\1/' | cut -f2 | sort | sed -r '/^$/d' | head
+  296  cut -f 2,5 downloaded_tweets_extend_nolf2.tsv | grep "type=retweeted" | sed -r 's/\[<ReferencedTweet id=([0-9]+) type=retweeted\]/\1/' | cut -f2 | sort | sed -r '/^$/d' | head
+  297  fgrep -f sorted_alpha_retweeted_ref_MID.tsv cut_col1-2_downloaded_original.tsv | head
+  298  head sorted_alpha_retweeted_ref_MID.tsv
+  299  head sorted_fgrep_retweeted_MID_original_MID_AID.tsv
+  300  cut -f2,5 downloaded_tweets_extend_nolf2.tsv | grep "type=retweeted" | sed -r 's/\[<ReferencedTweet id=([0-9]+) type=retweeted\]/\1/' | head
+  301  cut -f2,5 downloaded_tweets_extend_nolf2.tsv | grep "type=retweeted" | sed -r 's/\[<ReferencedTweet id=([0-9]+) type=retweeted\]/\1/' | sort -k2 | head
+  302  head sorted_cutf25_grep_retweeted_sedRegex_downloaded_extend.tsv
+  303  head sorted_fgrep_retweeted_MID_original_MID_AID.tsv
+  304  head a4q1.tsv
+  305  tail -n +2 a4q1.tsv | cut -f1 | sort | uniq -c | sort -nr | awk '{if ($1>=3) print $1}' | head
+  306  tail -n +2 a4q1.tsv | cut -f1 | sort | uniq -c | sort -nr | awk '{if ($1>=3) print $1}' | sort | uniq -c | sort -nr | awk '{print $1"\t"$2}'
+  307  tail -n +2 a4q1.tsv | cut -f1 | sort | uniq -c | sort -nr | awk '{if ($1>=3) print $1}' | sort | uniq -c | sort -nr | awk '{print $1"\t"$2}' | wc -l
+  308  history | grep fgrep_orig-AuthorIDs-gotRetweets-3Rgreater_downloadOrig_awkPrint_origMIDs.tsv
+  309  find -f -type f -name "fgrep_orig-AuthorIDs-gotRetweets-3Rgreater_downloadOrig_awkPrint_origMIDs.tsv"
+  310  find ./ -type f -name "fgrep_orig-AuthorIDs-gotRetweets-3Rgreater_downloadOrig_awkPrint_origMIDs.tsv"
+  311  find ./ -type f -name "3Rgreater_downloadOrig"
+  312  tmux attach -t a4
+  313  find ./ -type f -name "3x*.tsv" 
+  314  cat top10_retweeted_AuthorIDs.tsv
+  315  awk '$1 < 200 {print $2}' top10_retweeted_AuthorIDs.tsv 
+  316  awk '$1 < 200 {print $2}' top10_retweeted_AuthorIDs.tsv > ../temp_graph/target_authors.txt
+  317  fgrep -f ../temp_graph/target_authors.txt a4q1.tsv > ../temp_graph/target_authors.tsv
+  318  awk '$1 < 200 {print $2}' top10_retweeted_AuthorIDs.tsv > network_graph_authors.txt
+  319  fgrep -f network_graph_authors.txt > network_graph.tsv
+  320  fgrep -f network_graph_authors.txt a4q1.tsv > netowrk_graph.tsv
+  321  cat network_graph_authors.txt
+  322  fgrep -f network_graph_authors.txt a4q1.tsv > network_graph.tsv
+  323  cat network_graph.tsv
+  324  head network_graph.tsv
+  325  ls
+  326  ls *.txt
+  327  mkdir ../a4backup
+  328  mv a4.txt ../a4backup/
+  329  ls
+  330  git status
+  331  ls
+  332  echo "# a4" >> README.md
+  333  git init
+  334  git add README.md
+  335  git add a4.txt 
+  336  git status
+  337  head a4q1.tsv
+  338  head a4q2.tsv
+  339  git add a4q*.tsv
+  340  git status
+  341  git reset HEAD a4q4_top_30_retweet_hashtags.tsv
+  342  git reset HEAD a4q5_grep80802900_a4q1file.tsv
+  343  git status
+  344  git rm --cached a4q5_grep80802900_a4q1file.tsv
+  345  git rm --cached a4q4_top_30_retweet_hashtags.tsv
+  346  git rm --cached a4q4_diff.tsv
+  347  git status
+  348  git add cmds.log
+  349  git plot A4_plot.svg
+  350  git add A4_plot.svg
+  351  git add network_graph.png
+  352  git add network_graph.tsv
+  353  git status
+  354  git commit -m "assignment 4 commit"
+  355  git status
+  356  git branch -M main
+  357  git remote add origin https://github.com/ivyle201/a4.git
+  358  git push -u origin main
+  359  cut -f 2,5 downloaded_tweets_extend_nolf2.tsv | grep "type=retweeted" | sed -r 's/\[<ReferencedTweet id=([0-9]+) type=retweeted\]/\1/' | cut -f2 | wc -l
+  360  cd A4
+  361  cut -f 2,5 downloaded_tweets_extend_nolf2.tsv | grep "type=retweeted" | sed -r 's/\[<ReferencedTweet id=([0-9]+) type=retweeted\]/\1/' | cut -f2 | sort | sed -r '/^$/d' | wc -l
+  362  cut -f 2,5 downloaded_tweets_extend_nolf2.tsv | grep "type=retweeted" | sed -r 's/\[<ReferencedTweet id=([0-9]+) type=retweeted\]/\1/' | cut -f2 | sort | wc -l
+  363  grep 18831926 downloaded_tweets_extend_nolf2.tsv | wc -l
+  364  grep 18831926 downloaded_tweets_extend_original_nolf2.tsv | wc -l
+  365  ls
+  366  fgrep -f sorted_alpha_retweeted_ref_MID.tsv cut_col1-2_downloaded_original.tsv | sort | wc -l
+  367  fgrep -f sorted_alpha_retweeted_ref_MID.tsv cut_col1-2_downloaded_original.tsv | wc -l
+  368  join -t $'\t' -o1.1,2.2 sorted_alpha_retweeted_ref_MID.tsv sorted_fgrep_retweeted_MID_original_MID_AID.tsv | head -n 4
+  369  join -t $'\t' -o1.1,2.2 sorted_alpha_retweeted_ref_MID.tsv sorted_fgrep_retweeted_MID_original_MID_AID.tsv | grep "18831926" | head -n 4
+  370  join -t $'\t' -o1.1,2.2 sorted_alpha_retweeted_ref_MID.tsv sorted_fgrep_retweeted_MID_original_MID_AID.tsv | grep "18831926" | wc -l
+  371  cut -f 2,5 downloaded_tweets_extend_nolf2.tsv | wc 
+  372  cut -f 2,5 downloaded_tweets_extend_nolf2.tsv | grep "type=retweeted" | wc -l
+  373  cut -f 2,5 downloaded_tweets_extend_nolf2.tsv | grep "type=retweeted" | sed -r 's/\[<ReferencedTweet id=([0-9]+) type=retweeted\]/\1/' | wc -l
+  374  cut -f 2,5 downloaded_tweets_extend_nolf2.tsv | grep "type=retweeted" | sed -r 's/\[<ReferencedTweet id=([0-9]+) type=retweeted\]/\1/' | cut -f2 | wc -;
+  375  cut -f 2,5 downloaded_tweets_extend_nolf2.tsv | grep "type=retweeted" | sed -r 's/\[<ReferencedTweet id=([0-9]+) type=retweeted\]/\1/' | cut -f2 | sort | wc -l
+  376  cut -f 2,5 downloaded_tweets_extend_nolf2.tsv | grep "type=retweeted" | sed -r 's/\[<ReferencedTweet id=([0-9]+) type=retweeted\]/\1/' | cut -f2 | sort | sed -r '/^$/d' | wc -l
+  377  join -t $'\t' -o1.1,2.2 sorted_alpha_retweeted_ref_MID.tsv sorted_fgrep_retweeted_MID_original_MID_AID.tsv | grep "18831926" | wc -l
+  378  join -t $'\t' -1.1,2.2 sorted_alpha_retweeted_ref_MID.tsv sorted_fgrep_retweeted_MID_original_MID_AID.tsv | grep "18831926" | wc -l
+  379  join -t $'\t' -i1.1,2.2 sorted_alpha_retweeted_ref_MID.tsv sorted_fgrep_retweeted_MID_original_MID_AID.tsv | grep "18831926" | wc -l
+  380  join -t $'\t' 1.1,2.2 sorted_alpha_retweeted_ref_MID.tsv sorted_fgrep_retweeted_MID_original_MID_AID.tsv | grep "18831926" | wc -l
+  381  grep "18831926" downloaded_tweets_extend_original_nolf2.tsv | cut f1,2 | head -n 4
+  382  cut -f1,2 downloaded_tweets_extend_original_nolf2.tsv | grep "18831926" | head -n 4
+  383  cut -f1,2 downloaded_tweets_extend_original_nolf2.tsv | grep "18831926" | sort -k1 | uniq -c | sort -nr | head -n 10
+  384  grep "1520260506262593539" downloaded_tweets_extend_nolf2.tsv | wc -l
+  385  join -t $'\t' -o1.1,2.2 sorted_alpha_retweeted_ref_MID.tsv sorted_fgrep_retweeted_MID_original_MID_AID.tsv | grep "18831926" | head -n 4
+  386  join -t $'\t' -o1.1,2.2 sorted_alpha_retweeted_ref_MID.tsv sorted_fgrep_retweeted_MID_original_MID_AID.tsv | grep "18831926" | sort | uniq -c | sort -nr | head -n 10
+  387  grep "1491862877405429763" downloaded_tweets_extend_original_nolf2.tsv | wc -l
+  388  grep "1491862877405429763" downloaded_tweets_extend_nolf2.tsv | wc -l
+  389  grep "1491862877405429763" downloaded_tweets_extend_nolf2.tsv | head 
+  390  grep "1491862877405429763" downloaded_tweets_extend_original_nolf2.tsv | head 
+  391  grep "1491862877405429763" downloaded_tweets_extend_nolf2.tsv | cut -f1 | head -n 15
+  392  grep "1491862877405429763" downloaded_tweets_extend_nolf2.tsv | cut -f1,4 | head -n 15
+  393  grep "1491862877405429763" downloaded_tweets_extend_nolf2.tsv | cut -f1,5 | head -n 15
+  394  grep "1491862877405429763" downloaded_tweets_extend_original_nolf2.tsv | cut -f1,2 | head
+  395  grep "1491862877405429763" downloaded_tweets_extend_original_nolf2.tsv | cut -f1 | head
+  396  grep "1491862877405429763" downloaded_tweets_extend_original_nolf2.tsv | ark '{print $1, $2}' | head
+  397  grep "1491862877405429763" downloaded_tweets_extend_original_nolf2.tsv | awk '{print $1, $2}' | head
+  398  grep "1491862877405429763" downloaded_tweets_extend_original_nolf2.tsv | awk '{print $1}' | head
+  399  cut -f1,2 downloaded_tweets_extend_original_nolf2.tsv | grep "1491862877405429763" | head 
+  400  cd A4
+  401  cat top10_retweeted_AuthorIDs.tsv
+  402  fgrep 1891490382 a4q1.tsv > retweet_network_graph.tsv
+  403  head retweet_network_graph.tsv 
+  404  head ../A3/Q1.tsv
+  405  tail -n +2 ../A3/Q1.tsv | cut -f1 | sort | uniq -c | sort -nr | head
+  406  fgrep 3453306553 ../A3/a4q1.tsv > replies_network_graph.tsv
+  407  fgrep 3453306553 ../A3/Q1.tsv > replies_network_graph.tsv
+  408  head replies_network_graph.tsv
+  409  ls
+  410  git status
+  411  git add a4.txxt
+  412  git add a4.txt
+  413  git add retweet_network_graph.svg
+  414  git add replies_network_graph.svg
+  415  ls *.png
+  416  git rm network_graph.png
+  417  git statu
+  418  git status
+  419  git commit -m "updating graphs for assignment 4"
+  420  git push
+  421  git rm network_graph.tsv 
+  422  git add replies_network_graph.tsv 
+  423  git add retweet_network_graph.tsv 
+  424  git status
+  425  git commit -m 'adding graph data files'
+  426  git push
+  427  vi oldest
+  428  ./oldest
+  429  ls -l
+  430  chmod 700 oldest
+  431  ./oldest 1 .
+  432  ls -lt
+  433  ls -lt $*
+  434  ./oldest 3 A4 A6 A5
+  435  ls -lt A4 A6 A5
+  436  ls -lt A4
+  437  ls -lt
+  438  ./oldest ws1
+  439  ./oldest 1 ws1
+  440  ./oldest 1 worksheet1
+  441  ls -lt worksheet1
+  442  ./oldest 2 ws3
+  443  echo $$
+  444  ps aux
+  445  ps aux | grep bash
+  446  echo $$
+  447  ps aux | grep vivian
+  448  read a b c
+  449  echo $a
+  450  echo $c
+  451  echo ${b:?"message"}
+  452  vi marks.txt
+  453  vi grade
+  454  chmod 700 grade
+  455  ./grade
+  456  vi grade
+  457  ./grade < marks.txt
+  458  vi grade
+  459  ./grade < marks.txt
+  460  vi grade
+  461  ./grade < marks.txt
+  462  vi grade
+  463  ./grade < marks.txt
+  464  vi grade
+  465  ./grade < marks.txt
+  466  vi marks.txt
+  467  ./grade < marks.txt
+  468  vi marks.txt
+  469  ./grade < marks.txt
+  470  vi marks.txt
+  471  ./grade < marks.txt
+  472  vi grade
+  473  ./grade < marks.txt
+  474  vi grade
+  475  ./grade < marks.txt
+  476  vi grade
+  477  ./grade < marks.txt
+  478  ls
+  479  head -n 10 amazon_reviews_us_Books_v1_02.tsv 
+  480  grep "Harry Porter" amazon_reviews_us_Books_v1_02.tsv 
+  481  cut -f6 amazon_reviews_us_Books_v1_02.tsv | grep "Harry Porter"
+  482  cut -f6 amazon_reviews_us_Books_v1_02.tsv | grep "Harry Potter"
+  483  cut -f6 amazon_reviews_us_Books_v1_02.tsv | head -n 100
+  484  ls
+  485  cd ws5
+  486  ls
+  487  cat ws5.txt
+  488  cd 
+  489  cut -f6 amazon_reviews_us_Books_v1_02.tsv | grep "Cat in the hat"
+  490  cut -f6 amazon_reviews_us_Books_v1_02.tsv | grep "cat"
+  491  cut -f6 amazon_reviews_us_Books_v1_02.tsv | grep "the cat in the hat"
+  492  cut -f6 amazon_reviews_us_Books_v1_02.tsv | grep "Bait and Switch: The (Futile) Pursuit of the American Dream"
+  493  cut -f6 amazon_reviews_us_Books_v1_02.tsv | sort | uniq -c | sort -nr | tain -10
+  494  cut -f6 amazon_reviews_us_Books_v1_02.tsv | sort | uniq -c | sort -nr | tail -10
+  495  cut -f6 amazon_reviews_us_Books_v1_02.tsv | grep "The Catcher in the Rye" | wc -l
+  496  cd 
+  497  cd ws6
+  498  ls
+  499  cd
+  500  cd ws5
+  501  ls
+  502  cat ws5.txt
+  503  cd
+  504  cd ws4
+  505  ls
+  506  cd worksheet4
+  507  ls
+  508  cat ws4.txt
+  509  cd
+  510  grep "076450861X" amazon_reviews_us_Books_v1_02.tsv 
+  511  grep "Rabbits For Dummies" amazon_reviews_us_Books_v1_02.tsv 
+  512  cd
+  513  tmux new-session -t ws7
+  514  ls
+  515  mkdir temp
+  516  cd temp
+  517  ls
+  518  echo 'sand door and or' > words.txt
+  519  sed -r '/s/and//g/' words.txt
+  520  sed -r '/s/and//g' words.txt
+  521  sed -r 's/and//g' words.txt
+  522  sed -r 's/<and>//g' words.txt
+  523  sed -r 's/\band\b//g' words.txt
+  524  sed -r 's/\band\b|\bor\b//g' words.txt
+  525  cat words.txt 
+  526  sed -r 's/\band\b//g' words.txt 
+  527  emacs words.txt 
+  528  nano words.txt
+  529  cat words.txt 
+  530  sed -r 's/\bin\b//g' words.txt 
+  531  sed -r 's/\bif\b//g' words.txt 
+  532  sed -r 's/\bif//g' words.txt 
+  533  cat words.txt 
+  534  sed -r 's/\b(if|in)\b//g' words.txt 
+  535  sed -r 's/\b(if|in|and|or)\b//g' words.txt 
+  536  mkdir ws7
+  537  cd ws7
+  538  grep "076450861X" amazon_reviews_us_Books_v1_02.tsv | sed -r 's/[\.,;]//g; s/\b(and|or|if|in|it)\b//ig; s/<\w+ \/?>//g'
+  539  grep "076450861X" ../amazon_reviews_us_Books_v1_02.tsv | sed -r 's/[\.,;]//g; s/\b(and|or|if|in|it)\b//ig; s/<\w+ \/?>//g'
+  540  grep "076450861X" ../amazon_reviews_us_Books_v1_02.tsv | cut -f14 | sed -r 's/[\.,;]//g; s/\b(and|or|if|in|it)\b//ig; s/<\w+ \/?>//g'
+  541  grep "076450861X" ../amazon_reviews_us_Books_v1_02.tsv | cut -f14 | sed -r 's/\[.+\]//g; s/[\.,;]//g; s/\b(and|or|if|in|it)\b//ig; s/<\w+ \/?>//g' > filtered_cut14_amazon_review_body_076450861X.tsv
+  542  cat filtered_cut14_amazon_review_body_076450861X.tsv 
+  543  history | cmds.log
+  544  history > cmds.log
+  545  exit
+  546  tmux attach -t ws7
+  547  ls
+  548  cat ws7.txt
+  549  cd ws7
+  550  grep "076450861X" ../amazon_reviews_us_Books_v1_02.tsv | cut -f14 
+  551  cd
+  552  la
+  553  ls
+  554  mv ws7.txt ws7
+  555  cd ws7
+  556  ls
+  557  rm ws7.txt
+  558  vi ws7.txt
+  559  cat ws7.txt
+  560  echo "# ws7" >> README.md
+  561  git init
+  562  git status
+  563  git add ws7.txt cmds.log filtered_cut14_amazon_review_body_076450861X.tsv README.md
+  564  git commit -m "ws7 commit"
+  565  git branch -M main
+  566  git remote add origin https://github.com/ivyle201/ws7.git
+  567  git push -u origin main
+  568  vi subtree.txt
+  569  source subtree.txt
+  570  ./subtree.txt
+  571  chmod 777 subtree.txt
+  572  ./subtree.txt
+  573  vi subtree.txt 
+  574  ./subtree.txt
+  575  vi subtree.txt 
+  576  ./subtree.txt
+  577  vi subtree.txt 
+  578  PS1=$hostname
+  579  PS1=`hostname | sed 's/\..*//'`; export PS1
+  580  exit
+  581  $HOSTNAME
+  582  echo $HOSTNAME
+  583  PS1=$HOSTNAME
+  584  exit
+  585  PS1=`hostname | sed 's/\..*//'`; export PS1
+  586  vi test1
+  587  ./test1
+  588  chmod 777 test1
+  589  ./test1
+  590  vi test1
+  591  ./test1
+  592  vi test1
+  593  ./test1
+  594  read a b c
+  595  echo $a
+  596  echo $b
+  597  echo $c
+  598  echo ${x:"message"}
+  599  echo ${a: "message"}
+  600  echo ${b:"message"}
+  601  echo ${b:?"message"}
+  602  vi test2
+  603  ./test
+  604  ./test2
+  605  chmod 777 test2
+  606  ./test2
+  607  vi test3
+  608  ./test3
+  609  chmod 777 test3
+  610  ./test3
+  611  vi test4
+  612  vi test3
+  613  vi test4
   614  ls
-  615  cut -f 2,5,6 downloaded_tweets_extend_nolf2.tsv | grep "type=retweeted" | sed -r 's/\[<ReferencedTweet id=([0-9]+) type=retweeted\]/\1/' | cut -f2 | sort | sed -r '/^$/d' | head
-  616  cut -f 2,5,6 downloaded_tweets_extend_nolf2.tsv 
-  617  cut -f 2,5,6 downloaded_tweets_extend_nolf2.tsv | head
-  618  cut -f 2,5,6 downloaded_tweets_extend_nolf2.tsv | grep "type=retweeted" | sed -r 's/\[<ReferencedTweet id=([0-9]+) type=retweeted\]/\1/' | head
-  619  cut -f 2,5,6 downloaded_tweets_extend_nolf2.tsv | grep "type=retweeted" | sed -r 's/\[<ReferencedTweet id=([0-9]+) type=retweeted\]/\1/' | cut -f2
-  620  cut -f 2,5,6 downloaded_tweets_extend_nolf2.tsv | grep "type=retweeted" | sed -r 's/\[<ReferencedTweet id=([0-9]+) type=retweeted\]/\1/' | cut -f2 | head
-  621  cut -f 2,5,6 downloaded_tweets_extend_nolf2.tsv | grep "type=retweeted" | sed -r 's/\[<ReferencedTweet id=([0-9]+) type=retweeted\]/\1/' | cut -f2 | sort | sed -r '/^$/d' | head
-  622  cut -f 2,5 downloaded_tweets_extend_nolf2.tsv | grep "type=retweeted" | sed -r 's/\[<ReferencedTweet id=([0-9]+) type=retweeted\]/\1/' | cut -f2 | sort | sed -r '/^$/d' | head
-  623  fgrep -f sorted_alpha_retweeted_ref_MID.tsv cut_col1-2_downloaded_original.tsv | head
-  624  head sorted_alpha_retweeted_ref_MID.tsv
-  625  head sorted_fgrep_retweeted_MID_original_MID_AID.tsv
-  626  cut -f2,5 downloaded_tweets_extend_nolf2.tsv | grep "type=retweeted" | sed -r 's/\[<ReferencedTweet id=([0-9]+) type=retweeted\]/\1/' | head
-  627  cut -f2,5 downloaded_tweets_extend_nolf2.tsv | grep "type=retweeted" | sed -r 's/\[<ReferencedTweet id=([0-9]+) type=retweeted\]/\1/' | sort -k2 | head
-  628  head sorted_cutf25_grep_retweeted_sedRegex_downloaded_extend.tsv
-  629  head sorted_fgrep_retweeted_MID_original_MID_AID.tsv
-  630  head a4q1.tsv
-  631  tail -n +2 a4q1.tsv | cut -f1 | sort | uniq -c | sort -nr | awk '{if ($1>=3) print $1}' | head
-  632  tail -n +2 a4q1.tsv | cut -f1 | sort | uniq -c | sort -nr | awk '{if ($1>=3) print $1}' | sort | uniq -c | sort -nr | awk '{print $1"\t"$2}'
-  633  tail -n +2 a4q1.tsv | cut -f1 | sort | uniq -c | sort -nr | awk '{if ($1>=3) print $1}' | sort | uniq -c | sort -nr | awk '{print $1"\t"$2}' | wc -l
-  634  history | grep fgrep_orig-AuthorIDs-gotRetweets-3Rgreater_downloadOrig_awkPrint_origMIDs.tsv
-  635  find -f -type f -name "fgrep_orig-AuthorIDs-gotRetweets-3Rgreater_downloadOrig_awkPrint_origMIDs.tsv"
-  636  find ./ -type f -name "fgrep_orig-AuthorIDs-gotRetweets-3Rgreater_downloadOrig_awkPrint_origMIDs.tsv"
-  637  find ./ -type f -name "3Rgreater_downloadOrig"
-  638  tmux attach -t a4
-  639  find ./ -type f -name "3x*.tsv" 
-  640  cat top10_retweeted_AuthorIDs.tsv
-  641  awk '$1 < 200 {print $2}' top10_retweeted_AuthorIDs.tsv 
-  642  awk '$1 < 200 {print $2}' top10_retweeted_AuthorIDs.tsv > ../temp_graph/target_authors.txt
-  643  fgrep -f ../temp_graph/target_authors.txt a4q1.tsv > ../temp_graph/target_authors.tsv
-  644  awk '$1 < 200 {print $2}' top10_retweeted_AuthorIDs.tsv > network_graph_authors.txt
-  645  fgrep -f network_graph_authors.txt > network_graph.tsv
-  646  fgrep -f network_graph_authors.txt a4q1.tsv > netowrk_graph.tsv
-  647  cat network_graph_authors.txt
-  648  fgrep -f network_graph_authors.txt a4q1.tsv > network_graph.tsv
-  649  cat network_graph.tsv
-  650  head network_graph.tsv
-  651  ls
-  652  ls *.txt
-  653  mkdir ../a4backup
-  654  mv a4.txt ../a4backup/
-  655  ls
-  656  git status
-  657  ls
-  658  echo "# a4" >> README.md
-  659  git init
-  660  git add README.md
-  661  git add a4.txt 
-  662  git status
-  663  head a4q1.tsv
-  664  head a4q2.tsv
-  665  git add a4q*.tsv
-  666  git status
-  667  git reset HEAD a4q4_top_30_retweet_hashtags.tsv
-  668  git reset HEAD a4q5_grep80802900_a4q1file.tsv
-  669  git status
-  670  git rm --cached a4q5_grep80802900_a4q1file.tsv
-  671  git rm --cached a4q4_top_30_retweet_hashtags.tsv
-  672  git rm --cached a4q4_diff.tsv
-  673  git status
-  674  git add cmds.log
-  675  git plot A4_plot.svg
-  676  git add A4_plot.svg
-  677  git add network_graph.png
-  678  git add network_graph.tsv
-  679  git status
-  680  git commit -m "assignment 4 commit"
-  681  git status
-  682  git branch -M main
-  683  git remote add origin https://github.com/ivyle201/a4.git
-  684  git push -u origin main
-  685  cut -f 2,5 downloaded_tweets_extend_nolf2.tsv | grep "type=retweeted" | sed -r 's/\[<ReferencedTweet id=([0-9]+) type=retweeted\]/\1/' | cut -f2 | wc -l
-  686  cd A4
-  687  cut -f 2,5 downloaded_tweets_extend_nolf2.tsv | grep "type=retweeted" | sed -r 's/\[<ReferencedTweet id=([0-9]+) type=retweeted\]/\1/' | cut -f2 | sort | sed -r '/^$/d' | wc -l
-  688  cut -f 2,5 downloaded_tweets_extend_nolf2.tsv | grep "type=retweeted" | sed -r 's/\[<ReferencedTweet id=([0-9]+) type=retweeted\]/\1/' | cut -f2 | sort | wc -l
-  689  grep 18831926 downloaded_tweets_extend_nolf2.tsv | wc -l
-  690  grep 18831926 downloaded_tweets_extend_original_nolf2.tsv | wc -l
-  691  ls
-  692  fgrep -f sorted_alpha_retweeted_ref_MID.tsv cut_col1-2_downloaded_original.tsv | sort | wc -l
-  693  fgrep -f sorted_alpha_retweeted_ref_MID.tsv cut_col1-2_downloaded_original.tsv | wc -l
-  694  join -t $'\t' -o1.1,2.2 sorted_alpha_retweeted_ref_MID.tsv sorted_fgrep_retweeted_MID_original_MID_AID.tsv | head -n 4
-  695  join -t $'\t' -o1.1,2.2 sorted_alpha_retweeted_ref_MID.tsv sorted_fgrep_retweeted_MID_original_MID_AID.tsv | grep "18831926" | head -n 4
-  696  join -t $'\t' -o1.1,2.2 sorted_alpha_retweeted_ref_MID.tsv sorted_fgrep_retweeted_MID_original_MID_AID.tsv | grep "18831926" | wc -l
-  697  cut -f 2,5 downloaded_tweets_extend_nolf2.tsv | wc 
-  698  cut -f 2,5 downloaded_tweets_extend_nolf2.tsv | grep "type=retweeted" | wc -l
-  699  cut -f 2,5 downloaded_tweets_extend_nolf2.tsv | grep "type=retweeted" | sed -r 's/\[<ReferencedTweet id=([0-9]+) type=retweeted\]/\1/' | wc -l
-  700  cut -f 2,5 downloaded_tweets_extend_nolf2.tsv | grep "type=retweeted" | sed -r 's/\[<ReferencedTweet id=([0-9]+) type=retweeted\]/\1/' | cut -f2 | wc -;
-  701  cut -f 2,5 downloaded_tweets_extend_nolf2.tsv | grep "type=retweeted" | sed -r 's/\[<ReferencedTweet id=([0-9]+) type=retweeted\]/\1/' | cut -f2 | sort | wc -l
-  702  cut -f 2,5 downloaded_tweets_extend_nolf2.tsv | grep "type=retweeted" | sed -r 's/\[<ReferencedTweet id=([0-9]+) type=retweeted\]/\1/' | cut -f2 | sort | sed -r '/^$/d' | wc -l
-  703  join -t $'\t' -o1.1,2.2 sorted_alpha_retweeted_ref_MID.tsv sorted_fgrep_retweeted_MID_original_MID_AID.tsv | grep "18831926" | wc -l
-  704  join -t $'\t' -1.1,2.2 sorted_alpha_retweeted_ref_MID.tsv sorted_fgrep_retweeted_MID_original_MID_AID.tsv | grep "18831926" | wc -l
-  705  join -t $'\t' -i1.1,2.2 sorted_alpha_retweeted_ref_MID.tsv sorted_fgrep_retweeted_MID_original_MID_AID.tsv | grep "18831926" | wc -l
-  706  join -t $'\t' 1.1,2.2 sorted_alpha_retweeted_ref_MID.tsv sorted_fgrep_retweeted_MID_original_MID_AID.tsv | grep "18831926" | wc -l
-  707  grep "18831926" downloaded_tweets_extend_original_nolf2.tsv | cut f1,2 | head -n 4
-  708  cut -f1,2 downloaded_tweets_extend_original_nolf2.tsv | grep "18831926" | head -n 4
-  709  cut -f1,2 downloaded_tweets_extend_original_nolf2.tsv | grep "18831926" | sort -k1 | uniq -c | sort -nr | head -n 10
-  710  grep "1520260506262593539" downloaded_tweets_extend_nolf2.tsv | wc -l
-  711  join -t $'\t' -o1.1,2.2 sorted_alpha_retweeted_ref_MID.tsv sorted_fgrep_retweeted_MID_original_MID_AID.tsv | grep "18831926" | head -n 4
-  712  join -t $'\t' -o1.1,2.2 sorted_alpha_retweeted_ref_MID.tsv sorted_fgrep_retweeted_MID_original_MID_AID.tsv | grep "18831926" | sort | uniq -c | sort -nr | head -n 10
-  713  grep "1491862877405429763" downloaded_tweets_extend_original_nolf2.tsv | wc -l
-  714  grep "1491862877405429763" downloaded_tweets_extend_nolf2.tsv | wc -l
-  715  grep "1491862877405429763" downloaded_tweets_extend_nolf2.tsv | head 
-  716  grep "1491862877405429763" downloaded_tweets_extend_original_nolf2.tsv | head 
-  717  grep "1491862877405429763" downloaded_tweets_extend_nolf2.tsv | cut -f1 | head -n 15
-  718  grep "1491862877405429763" downloaded_tweets_extend_nolf2.tsv | cut -f1,4 | head -n 15
-  719  grep "1491862877405429763" downloaded_tweets_extend_nolf2.tsv | cut -f1,5 | head -n 15
-  720  grep "1491862877405429763" downloaded_tweets_extend_original_nolf2.tsv | cut -f1,2 | head
-  721  grep "1491862877405429763" downloaded_tweets_extend_original_nolf2.tsv | cut -f1 | head
-  722  grep "1491862877405429763" downloaded_tweets_extend_original_nolf2.tsv | ark '{print $1, $2}' | head
-  723  grep "1491862877405429763" downloaded_tweets_extend_original_nolf2.tsv | awk '{print $1, $2}' | head
-  724  grep "1491862877405429763" downloaded_tweets_extend_original_nolf2.tsv | awk '{print $1}' | head
-  725  cut -f1,2 downloaded_tweets_extend_original_nolf2.tsv | grep "1491862877405429763" | head 
-  726  cd A4
-  727  cat top10_retweeted_AuthorIDs.tsv
-  728  fgrep 1891490382 a4q1.tsv > retweet_network_graph.tsv
-  729  head retweet_network_graph.tsv 
-  730  head ../A3/Q1.tsv
-  731  tail -n +2 ../A3/Q1.tsv | cut -f1 | sort | uniq -c | sort -nr | head
-  732  fgrep 3453306553 ../A3/a4q1.tsv > replies_network_graph.tsv
-  733  fgrep 3453306553 ../A3/Q1.tsv > replies_network_graph.tsv
-  734  head replies_network_graph.tsv
-  735  ls
-  736  git status
-  737  git add a4.txxt
-  738  git add a4.txt
-  739  git add retweet_network_graph.svg
-  740  git add replies_network_graph.svg
-  741  ls *.png
-  742  git rm network_graph.png
-  743  git statu
-  744  git status
-  745  git commit -m "updating graphs for assignment 4"
-  746  git push
-  747  git rm network_graph.tsv 
-  748  git add replies_network_graph.tsv 
-  749  git add retweet_network_graph.tsv 
-  750  git status
-  751  git commit -m 'adding graph data files'
-  752  git push
-  753  vi oldest
-  754  ./oldest
-  755  ls -l
-  756  chmod 700 oldest
-  757  ./oldest 1 .
-  758  ls -lt
-  759  ls -lt $*
-  760  ./oldest 3 A4 A6 A5
-  761  ls -lt A4 A6 A5
-  762  ls -lt A4
-  763  ls -lt
-  764  ./oldest ws1
-  765  ./oldest 1 ws1
-  766  ./oldest 1 worksheet1
-  767  ls -lt worksheet1
-  768  ./oldest 2 ws3
-  769  echo $$
-  770  ps aux
-  771  ps aux | grep bash
-  772  echo $$
-  773  ps aux | grep vivian
-  774  read a b c
-  775  echo $a
-  776  echo $c
-  777  echo ${b:?"message"}
-  778  vi marks.txt
-  779  vi grade
-  780  chmod 700 grade
-  781  ./grade
-  782  vi grade
-  783  ./grade < marks.txt
-  784  vi grade
-  785  ./grade < marks.txt
-  786  vi grade
-  787  ./grade < marks.txt
-  788  vi grade
-  789  ./grade < marks.txt
-  790  vi grade
-  791  ./grade < marks.txt
-  792  vi marks.txt
-  793  ./grade < marks.txt
-  794  vi marks.txt
-  795  ./grade < marks.txt
-  796  vi marks.txt
-  797  ./grade < marks.txt
-  798  vi grade
-  799  ./grade < marks.txt
-  800  vi grade
-  801  ./grade < marks.txt
-  802  vi grade
-  803  ./grade < marks.txt
-  804  ls
-  805  head -n 10 amazon_reviews_us_Books_v1_02.tsv 
-  806  grep "Harry Porter" amazon_reviews_us_Books_v1_02.tsv 
-  807  cut -f6 amazon_reviews_us_Books_v1_02.tsv | grep "Harry Porter"
-  808  cut -f6 amazon_reviews_us_Books_v1_02.tsv | grep "Harry Potter"
-  809  cut -f6 amazon_reviews_us_Books_v1_02.tsv | head -n 100
+  615  cat test3
+  616  vi test4
+  617  vi marks.txt
+  618  ./test4 < marks.txt
+  619  chmod 777 marks.txt
+  620  ./test4 < marks.txt
+  621  chmod 777 test4
+  622  ./test4 < marks.txt
+  623  vi test
+  624  vi test4
+  625  ./test4 < marks.txt
+  626  vi test4
+  627  ./test4 < marks.txt
+  628  ls
+  629  cat test4
+  630  vi test4
+  631  cat test4
+  632  source test4 < marks.txt 
+  633  vi test4
+  634  source test4 < marks.txt 
+  635  vi test4
+  636  source test4 < marks.txt 
+  637  echo Total number of input: $#
+  638  echo First input: $1
+  639  echo Second input: $2
+  640  ls
+  641  vi test5
+  642  ./test5 2
+  643  chmod 777 test5
+  644  ./test5 2
+  645  vi test5
+  646  ./test5 2
+  647  ./test 4
+  648  ./test5 4
+  649  ./test5 3
+  650  ./test5
+  651  vi test5
+  652  vi test5 
+  653  ./test5
+  654  ./test5 0
+  655  ./test5 1
+  656  ./test5 5
+  657  ./test5 4
+  658  vi test6
+  659  ls
+  660  cat test5
+  661  vi test6
+  662  chmod 777 test6
+  663  ./ test6
+  664  ./test6
+  665  ./test6 3
+  666  vi test6
+  667  ./test6 3
+  668  vi test6
+  669  ./test6 3
+  670  vi test66
+  671  rm test6
+  672  ls
+  673  vi test6
+  674  ./test6 4
+  675  chmod 777 test6
+  676  ./test6 4
+  677  vi test6
+  678  ./test6 4
+  679  ./test6 4 1
+  680  ./test6 4 
+  681  vi test6
+  682  ./test6 4 
+  683  vi test6
+  684  chmod 777 test6
+  685  ./test6 4 
+  686  vi test6
+  687  ./test6 4 
+  688  ./test6 4 5
+  689  ./test6
+  690  vi test6
+  691  ./test6
+  692  ./test6 4
+  693  vi test7
+  694  chmod 777 test7
+  695  ./test7
+  696  vi test7
+  697  ./test7
+  698  ls
+  699  head -n 10 amazon_reviews_us_Books_v1_02.tsv 
+  700  tmux new-sesson -t ws8
+  701  tmux new-session -t ws8
+  702  ls
+  703  vi test7
+  704  ./test7
+  705  cat test7
+  706  cat test7 8
+  707  ./test7 
+  708  ./test7 8
+  709  ./test7 2
+  710  vi test7
+  711  ./test7 
+  712  vi test7
+  713  ./test7 
+  714  ./test7 Tuesday
+  715  vi test7
+  716  vi test7 Sunday
+  717  ./test7 Sunday
+  718  ./test7
+  719  mkdir ws8
+  720  cd ws8
+  721  awk -F "\t" '$12=="Y" {print $14}' ../amazon_reviews_us_Books_v1_02.tsv | head -n 100 > verified.txt
+  722  awk -F "\t" '$12=="N" {print $14}' ../amazon_reviews_us_Books_v1_02.tsv | head -n 100 > unverified.txt
+  723  sed -r 's/\[.+\]/ /g; s/[\.,;"\/\(\)]/ /g; s/<\w+ *\/?>//g' verified.txt > filtered_verified.txt
+  724  sed -r "s/<\w+ *\/?>//g; s/[^a-zA-Z']/ /g" verified.txt > filtered_verified.txt 
+  725  sed -r "s/<\w+ *\/?>//g; s/[^a-zA-Z']/ /g" unverified.txt > filtered_unverified.txt 
+  726  vi count_words_awk_script
+  727  awk -f count_words_awk_script filtered_verified.txt | sort -k2 -nr | head -n 10
+  728  awk -f count_words_awk_script filtered_verified.txt | sort -k2 -nr | head -n 10 > top10_words_verified_review_body.txt
+  729  awk -f count_words_awk_script filtered_unverified.txt | sort -k2 -nr | head -n 10 > top10_words_unverified_review_body.txt
+  730  head top10_words_unverified_review_body.txt 
+  731  exit
+  732  tmux attach -t ws8
+  733  cd ws8
+  734  cat unverified.txt 
+  735  sed -r 's/\[.+\]/ /g; s/[\.,;"\/\(\):]/ /g; s/<\w+ *\/?>//g' verified.txt > filtered_unverified.txt
+  736  head -n 100 filtered_unverified.txt 
+  737  sed -r "s/<\w+ *\/?>//g; s/[^\w']/ /" unverified.txt > filtered_unverified.txt
+  738  head filtered_unverified.txt 
+  739  sed -r "s/<\w+ *\/?>//g; s/[^\w']/ /g" unverified.txt > filtered_unverified.txt
+  740  head filtered_unverified.txt 
+  741  sed -r "s/<\w+ *\/?>//g; s/[^\w+']/ /g" unverified.txt > filtered_unverified.txt
+  742  head filtered_unverified.txt 
+  743  sed -r "s/[^\w+']/ /g" unverified.txt > filtered_unverifieåd.txt
+  744  head filtered_unverified.txt 
+  745  sed -r "s/[^\w+']/ /g" unverified.txt > filtered_unverifieåd.txt
+  746  sed -r 's/[^\w]/ /g' unverified.txt > filteredå_unverifieåd.txtå
+  747  sed -r 's/[^\w]/ /g' unverified.txt > filteredå_unverifieåd.txt
+  748  sed -r 's/[^\w]/ /g' unverified.txt > filtered_unverified.txt
+  749  head filtered_unverified.txt 
+  750  sed -r 's/[^a-zA-Z]/ /g' unverified.txt > filtered_unverified.txt
+  751  head filtered_unverified.txt 
+  752  sed -r "s/[^a-zA-Z']/ /g" unverified.txt > filtered_unverified.txt
+  753  head filtered_unverified.txt 
+  754  sed -r "s/[^a-zA-Z']/ /g" unverified.txt > filtered_unverified.txt
+  755  sed -r "s/<\w+ *\/?>//g; s/[^a-zA-Z']/ /g" unverified.txt | head -n 15
+  756  sed -r "s/<\w+ *\/?>//g; s/[^a-zA-Z']/ /g" unverified.txt | 
+  757  tmux attach -t ws8
+  758  ls
+  759  cd temp
+  760  ls
+  761  cat words.txt 
+  762  sed 's/a/A/g' 's/i/I/g' words.txt 
+  763  sed -e 's/a/A/g' -e 's/i/I/g' words.txt 
+  764  sed -d 's/a/A/g' words.txt 
+  765  sed 's/a/A/g' words.txt 
+  766  sed -n 's/a/A/g' words.txt 
+  767  sed -n 's/a/A/g p' words.txt 
+  768  sed -n '/a/d' words.txt 
+  769  sed '/a/d' words.txt 
+  770  sed '/1/d' words.txt 
+  771  cat words.txt 
+  772  sed '/1 d' words.txt 
+  773  sed '1 d' words.txt 
+  774  sed '$ d' words.txt 
+  775  sed '1 d' words.txt 
+  776  sed '$ d' words.txt 
+  777  sed '2$ d' words.txt 
+  778  sed '$2 d' words.txt 
+  779  sed '$-2 d' words.txt 
+  780  sed '1,5 d' words.txt 
+  781  sed '1,4 d' words.txt 
+  782  sed '1,3 d' words.txt 
+  783  sed '$,3 d' words.txt 
+  784  cat words.txt 
+  785  sed 's/a/A/g ; s/i/I/g' words.txt 
+  786  sed '/a/! d' words.txt 
+  787  emacs test3.sh
+  788  nano test3.sh
+  789  chmod u+x test3.sh 
+  790  ./test3.sh 
+  791  cd /
+  792  find -name emacs .
+  793  find . -name emacs
+  794  cd
+  795  ls
+  796  gunzip emacs-28.2.tar.gz 
+  797  tar -xf emacs-28.2.tar 
+  798  ls
+  799  cd emacs-28.2/
+  800  ./configure --prefix=/home/abhi/emacs --bindir=/home/abhi/bin
+  801  ./configure --prefix=/home/vivian/emacs --bindir=/home/vivian/bin
+  802  make --with-gnutls=ifavailable && make --with-gnutls=ifavailable install
+  803  ./configure --prefix=/home/vivian/emacs --bindir=/home/vivian/bin --with-gnutls=ifavailable
+  804  cd ..
+  805  ls
+  806  rm emacs-28.2.tar 
+  807  rm -rf emacs-28.2/
+  808  ls
+  809  cd temp
   810  ls
-  811  cd ws5
-  812  ls
-  813  cat ws5.txt
-  814  cd 
-  815  cut -f6 amazon_reviews_us_Books_v1_02.tsv | grep "Cat in the hat"
-  816  cut -f6 amazon_reviews_us_Books_v1_02.tsv | grep "cat"
-  817  cut -f6 amazon_reviews_us_Books_v1_02.tsv | grep "the cat in the hat"
-  818  cut -f6 amazon_reviews_us_Books_v1_02.tsv | grep "Bait and Switch: The (Futile) Pursuit of the American Dream"
-  819  cut -f6 amazon_reviews_us_Books_v1_02.tsv | sort | uniq -c | sort -nr | tain -10
-  820  cut -f6 amazon_reviews_us_Books_v1_02.tsv | sort | uniq -c | sort -nr | tail -10
-  821  cut -f6 amazon_reviews_us_Books_v1_02.tsv | grep "The Catcher in the Rye" | wc -l
-  822  cd 
-  823  cd ws6
-  824  ls
-  825  cd
-  826  cd ws5
-  827  ls
-  828  cat ws5.txt
-  829  cd
-  830  cd ws4
-  831  ls
-  832  cd worksheet4
-  833  ls
-  834  cat ws4.txt
-  835  cd
-  836  grep "076450861X" amazon_reviews_us_Books_v1_02.tsv 
-  837  grep "Rabbits For Dummies" amazon_reviews_us_Books_v1_02.tsv 
-  838  cd
-  839  tmux new-session -t ws7
-  840  ls
-  841  mkdir temp
-  842  cd temp
-  843  ls
-  844  echo 'sand door and or' > words.txt
-  845  sed -r '/s/and//g/' words.txt
-  846  sed -r '/s/and//g' words.txt
-  847  sed -r 's/and//g' words.txt
-  848  sed -r 's/<and>//g' words.txt
-  849  sed -r 's/\band\b//g' words.txt
-  850  sed -r 's/\band\b|\bor\b//g' words.txt
-  851  cat words.txt 
-  852  sed -r 's/\band\b//g' words.txt 
-  853  emacs words.txt 
-  854  nano words.txt
-  855  cat words.txt 
-  856  sed -r 's/\bin\b//g' words.txt 
-  857  sed -r 's/\bif\b//g' words.txt 
-  858  sed -r 's/\bif//g' words.txt 
-  859  cat words.txt 
-  860  sed -r 's/\b(if|in)\b//g' words.txt 
-  861  sed -r 's/\b(if|in|and|or)\b//g' words.txt 
-  862  mkdir ws7
-  863  cd ws7
-  864  grep "076450861X" amazon_reviews_us_Books_v1_02.tsv | sed -r 's/[\.,;]//g; s/\b(and|or|if|in|it)\b//ig; s/<\w+ \/?>//g'
-  865  grep "076450861X" ../amazon_reviews_us_Books_v1_02.tsv | sed -r 's/[\.,;]//g; s/\b(and|or|if|in|it)\b//ig; s/<\w+ \/?>//g'
-  866  grep "076450861X" ../amazon_reviews_us_Books_v1_02.tsv | cut -f14 | sed -r 's/[\.,;]//g; s/\b(and|or|if|in|it)\b//ig; s/<\w+ \/?>//g'
-  867  grep "076450861X" ../amazon_reviews_us_Books_v1_02.tsv | cut -f14 | sed -r 's/\[.+\]//g; s/[\.,;]//g; s/\b(and|or|if|in|it)\b//ig; s/<\w+ \/?>//g' > filtered_cut14_amazon_review_body_076450861X.tsv
-  868  cat filtered_cut14_amazon_review_body_076450861X.tsv 
-  869  history | cmds.log
-  870  history > cmds.log
-  871  exit
-  872  tmux attach -t ws7
-  873  ls
-  874  cat ws7.txt
-  875  cd ws7
-  876  grep "076450861X" ../amazon_reviews_us_Books_v1_02.tsv | cut -f14 
-  877  cd
-  878  la
+  811  nano lines.txt
+  812  awk '$2=="def"'
+  813  awk '$2=="def"' lines.txt 
+  814  awk '!$2=="def"' lines.txt 
+  815  awk '/$2=="def"/' lines.txt 
+  816  awk '$2=="def"' lines.txt 
+  817  awk '{print foo["a"]}' lines.txt 
+  818  awk '{print "."foo["a"]"."}' lines.txt 
+  819  echo ..
+  820  awk '{if(foo["a"]) print "no"' lines.txt 
+  821  awk '{if(foo["a"]) print "no";' lines.txt 
+  822  awk '{if(foo["a"]) { print "no"; }' lines.txt 
+  823  awk '{if (foo["a"]) { print "no"; }' lines.txt 
+  824  awk '{if (foo["a"] == '') { print "no"; }' lines.txt 
+  825  awk '{if (foo["a"] == "") { print "no"; }' lines.txt 
+  826  awk '{ if (foo["a"] == "") { print "no"; }}' lines.txt 
+  827  awk '{ if (foo["a"] == 0) { print "no"; }}' lines.txt 
+  828  awk '{ if (foo["a"]) { print "no"; }}' lines.txt 
+  829  awk '{ if (!foo["a"]) { print "no"; }}' lines.txt 
+  830  awk '{ for (i=0;i<NF;i++) { print $i}}' lines.txt
+  831  awk '{ for (i=1;i<NF;i++) { print $i;print '.'}}' lines.txt
+  832  awk '{ for (i=1;i<NF;i++) { print $i;print "."}}' lines.txt
+  833  awk '{ for (i=1;i<=NF;i++) { print $i;print "."}}' lines.txt
+  834  awk '{ for (i=1;i<=NF;i++) { print $i"."}}' lines.txt
+  835  ls
+  836  cd ..
+  837  cd ws8/
+  838  ls
+  839  awk -f awktest word
+  840  nano awktest 
+  841  awk -f awktest word
+  842  awk -f awktest word
+  843  nano awktest 
+  844  awk -f awktest word
+  845  cd ws8
+  846  ls -l
+  847  cd ..
+  848  ls
+  849  cat ws8.txt
+  850  ls
+  851  more ws8.txt
+  852  ls
+  853  cp ws8.txt ws8_temp.txt
+  854  ls -l
+  855  cd /
+  856  ls
+  857  cd mnt/
+  858  ls
+  859  cd scratch/
+  860  ls
+  861  cd vivian
+  862  pwd
+  863  cd ~
+  864  ln -s /mnt/scratch/vivian/
+  865  ls
+  866  cd temps
+  867  cd temp_graph/
+  868  ls
+  869  cd ..
+  870  cd temp
+  871  ls
+  872  rm *.*
+  873  cd ..
+  874  ln -s /mnt/scratch/vivian/
+  875  ls
+  876  cp ws8.txt /mnt/scratch/vivian/ws8_temp.txt
+  877  cd /mnt/scratch/vivian/ws8_temp.txt
+  878  cd /mnt/scratch/vivian/
   879  ls
-  880  mv ws7.txt ws7
-  881  cd ws7
-  882  ls
-  883  rm ws7.txt
-  884  vi ws7.txt
-  885  cat ws7.txt
-  886  echo "# ws7" >> README.md
-  887  git init
-  888  git status
-  889  git add ws7.txt cmds.log filtered_cut14_amazon_review_body_076450861X.tsv README.md
-  890  git commit -m "ws7 commit"
-  891  git branch -M main
-  892  git remote add origin https://github.com/ivyle201/ws7.git
-  893  git push -u origin main
-  894  vi subtree.txt
-  895  source subtree.txt
-  896  ./subtree.txt
-  897  chmod 777 subtree.txt
-  898  ./subtree.txt
-  899  vi subtree.txt 
-  900  ./subtree.txt
-  901  vi subtree.txt 
-  902  ./subtree.txt
-  903  vi subtree.txt 
-  904  PS1=$hostname
-  905  PS1=`hostname | sed 's/\..*//'`; export PS1
-  906  exit
-  907  $HOSTNAME
-  908  echo $HOSTNAME
-  909  PS1=$HOSTNAME
-  910  exit
-  911  PS1=`hostname | sed 's/\..*//'`; export PS1
-  912  vi test1
-  913  ./test1
-  914  chmod 777 test1
-  915  ./test1
-  916  vi test1
-  917  ./test1
-  918  vi test1
-  919  ./test1
-  920  read a b c
-  921  echo $a
-  922  echo $b
-  923  echo $c
-  924  echo ${x:"message"}
-  925  echo ${a: "message"}
-  926  echo ${b:"message"}
-  927  echo ${b:?"message"}
-  928  vi test2
-  929  ./test
-  930  ./test2
-  931  chmod 777 test2
-  932  ./test2
-  933  vi test3
-  934  ./test3
-  935  chmod 777 test3
-  936  ./test3
-  937  vi test4
-  938  vi test3
-  939  vi test4
+  880  ls -l
+  881  ls -l .
+  882  chmod a-r .
+  883  ls -l
+  884  ls -l .
+  885  chmod u+r .
+  886  ls -l .
+  887  chmod o-r .
+  888  ls -l .
+  889  man chmod
+  890  chmod o-r /mnt/scratch/vivian
+  891  ls -l .
+  892  ls -l /mnt/scratch/vivian/
+  893  cd ..
+  894  ls -l | grep vivian
+  895  chmod o-x vivian
+  896  ls -l | grep vivian
+  897  chmod g-x vivian
+  898  ls -l | grep vivian
+  899  cd vivian
+  900  ls
+  901  more ws8_temp.txt 
+  902  mkdir ws8
+  903  mv *.txt ws8
+  904  cd ws8
+  905  ls
+  906  ls ~/ws8
+  907  ls ~
+  908  head -n 1 ~/amazon_reviews_us_Books_v1_02.tsv
+  909  head -n 1 ~/amazon_reviews_us_Books_v1_02.tsv | tr '\t' '\n
+  910  head -n 1 ~/amazon_reviews_us_Books_v1_02.tsv | tr '\t' '\n'
+  911  head -n 1 ~/amazon_reviews_us_Books_v1_02.tsv | tr '\t' '\n' | grep . -n
+  912  pwd
+  913  ls
+  914  awk -F '\t' '$12=="Y" {print $14}' ~/amazon_reviews_us_Books_v1_02.tsv | head -n 100 > verified.txt
+  915  head verified.txt 
+  916  awk -F '\t' '$12=="N" {print $14}' ~/amazon_reviews_us_Books_v1_02.tsv | head -n 100 > unverified.txt
+  917  head unverified.txt 
+  918  echo '<foo/><blah ><boo/>' > html.html
+  919  sed -r "s/<\w+ *\/?>//g' | html.html
+  920  sed -r "s/<\w+ *\/?>//g" | html.html
+  921  sed -r "s/<\w+ *\/?>//g" html.html
+  922  echo '<foo/><blah ><boo/>12<12>' > html.html
+  923  sed -r "s/<\w+ *\/?>//g" html.html
+  924  sed -r "s/\w//g" html.html
+  925  sed -r 's/\w//g' html.html
+  926  sed -r "s/[\w]//g" html.html
+  927  head verified.txt 
+  928  sed -r "s/<\w+ *\/?>//g; s/[^a-zA-Z']/ /g" verified.txt > filtered_verified.txt 
+  929  head filtered_verified.txt 
+  930  sed -r "s/<\w+ *\/?>//g; s/[^a-zA-Z']/ /g" unverified.txt > filtered_uverified.txt 
+  931  more ws8_temp.txt 
+  932  cat ~/ws8/count_words_awk_script 
+  933  awk -f ~/ws8/count_words_awk_script filtered_verified.txt | sort -k2 -nr | head -n 10
+  934  cat ~/ws8/top10_words_unverified_review_body.txt
+  935  ls
+  936  cd ..
+  937  mv ws8 ws8_bak
+  938  cp -r ~/ws8 ws8
+  939  cd ws8
   940  ls
-  941  cat test3
-  942  vi test4
-  943  vi marks.txt
-  944  ./test4 < marks.txt
-  945  chmod 777 marks.txt
-  946  ./test4 < marks.txt
-  947  chmod 777 test4
-  948  ./test4 < marks.txt
-  949  vi test
-  950  vi test4
-  951  ./test4 < marks.txt
-  952  vi test4
-  953  ./test4 < marks.txt
-  954  ls
-  955  cat test4
-  956  vi test4
-  957  cat test4
-  958  source test4 < marks.txt 
-  959  vi test4
-  960  source test4 < marks.txt 
-  961  vi test4
-  962  source test4 < marks.txt 
-  963  echo Total number of input: $#
-  964  echo First input: $1
-  965  echo Second input: $2
-  966  ls
-  967  vi test5
-  968  ./test5 2
-  969  chmod 777 test5
-  970  ./test5 2
-  971  vi test5
-  972  ./test5 2
-  973  ./test 4
-  974  ./test5 4
-  975  ./test5 3
-  976  ./test5
-  977  vi test5
-  978  vi test5 
-  979  ./test5
-  980  ./test5 0
-  981  ./test5 1
-  982  ./test5 5
-  983  ./test5 4
-  984  vi test6
-  985  ls
-  986  cat test5
-  987  vi test6
-  988  chmod 777 test6
-  989  ./ test6
-  990  ./test6
-  991  ./test6 3
-  992  vi test6
-  993  ./test6 3
-  994  vi test6
-  995  ./test6 3
-  996  vi test66
-  997  cd ws8
-  998  awk -f "\t" 'if{$12==Y} print $14' | wc -l
-  999  awk -f "\t" 'if{$12==Y} print $14' ../amazon_reviews_us_Books_v1_02.tsv | wc -l
- 1000  awk -f "\t" '{if($12==Y) print $14}' ../amazon_reviews_us_Books_v1_02.tsv | wc -l
- 1001  awk -f "\t" '{if($12=="Y") print $14}' ../amazon_reviews_us_Books_v1_02.tsv | wc -l
- 1002  awk -f "\t" '{$12=="Y"} print $14' ../amazon_reviews_us_Books_v1_02.tsv | wc -l
- 1003  awk -f "\t" '$12=="Y" {print $14}' ../amazon_reviews_us_Books_v1_02.tsv | wc -l
- 1004  awk -F "\t" '$12=="Y" {print $14}' ../amazon_reviews_us_Books_v1_02.tsv | wc -l
- 1005  awk -F "\t" '$12=="Y" {print $14}' ../amazon_reviews_us_Books_v1_02.tsv > verified.txt
- 1006  awk -F "\t" '$12=="N" {print $14}' ../amazon_reviews_us_Books_v1_02.tsv > verified.txt
- 1007  ls
- 1008  rm verified.txt
- 1009  ls
- 1010  awk -F "\t" '$12=="Y" {print $14}' ../amazon_reviews_us_Books_v1_02.tsv | head -n 100 > verified.txt
- 1011  awk -F "\t" '$12=="N" {print $14}' ../amazon_reviews_us_Books_v1_02.tsv | head -n 100 > unverified.txt
- 1012  ls
- 1013  head verified.txt
- 1014  awk -F "\t" '$12=="N" {print $14}' ../amazon_reviews_us_Books_v1_02.tsv | head -n 100 > unverified.txt
- 1015  wc verified.txt 
- 1016  vi word
- 1017  vi akwtest
- 1018  awk -f akwtest word
- 1019  vi akwtest 
- 1020  rm akwtest
- 1021  vi awktest
- 1022  rm awktest
- 1023  vi awktest
- 1024  rm awktest
- 1025  vi awktest
- 1026  awk -f akwtest word
- 1027  awk -f awktest word
- 1028  vi awktest
- 1029  awk -f awktest word
- 1030  vi awktest
- 1031  awk -f awktest word
- 1032  vi awktest
- 1033  echo word
- 1034  cat word
- 1035  head verified.txt 
- 1036  sed -r 's//'
- 1037  sed -r 's/\[.+\]//g; s/[\.,;]//g; s/<\w+ \/?>//g' verified.txt | head -n 2 
- 1038  sed -r 's/\[.+\]//g; s/[\.,;]//g; s/<\w+ \/?>//g' verified.txt | head -n 15
- 1039  sed -r 's/\[.+\]/ /g; s/[\.,;"]/ /g; s/<\w+ \/?>/ /g' verified.txt | head -n 15
- 1040  sed -r 's/\[.+\]/ /g; s/[\.,;"\/]/ /g; s/<\w+ \/?>/ /g' verified.txt | head -n 15
- 1041  sed -r 's/\[.+\]/ /g; s/[\.,;"\/]/ /g; s/<\w+ \/?>//g' verified.txt | head -n 15
- 1042  sed -r 's/\[.+\]/ /g; s/[\.,;"\/]/ /g; s/<\w+ *\/?>//g' verified.txt | head -n 15
- 1043  sed -r 's/\[.+\]/ /g; s/[\.,;"\/\(\)]/ /g; s/<\w+ *\/?>//g' verified.txt | head -n 15
- 1044  sed -r 's/\[.+\]/ /g; s/[\.,;"\/\(\)]/ /g; s/<\w+ *\/?>//g' verified.txt > filtered_verified.txt
- 1045  awk -f awktest filtered_verified.txt | head -n 20
- 1046  awk -f awktest filtered_verified.txt | sort -k2 | head -n 15
- 1047  awk -f awktest filtered_verified.txt | sort -k2 -nr | head -n 15
- 1048  remove awktest
- 1049  rm awktest
- 1050  vi awktest
- 1051  awk -f awktest filtered_verified.txt | sort -k2 -nr | head -n 15
- 1052  vi awktest
- 1053  awk -f awktest filtered_verified.txt | sort -k2 -nr | head -n 15
- 1054* awk -f awktest filtered_verified.txt | sort -k2 -nr | 
- 1055  awk -f awktest filtered_verified.txt | sort -k2 | head -n 15
- 1056  sed -r 's/\[.+\]/ /g; s/[\.,;"\/\(\)]/ /g; s/<\w+ *\/?>//g' unverified.txt > filtered_unverified.txt
- 1057  head filtered_unverified.txt 
- 1058   filtered_unverified.txt 
- 1059  vi awktest
- 1060  history > cmds.log
- 1061  history > /mnt/scratch/vivian/ws8/cmds.log
+  941  nano ws8.txt
+  942  vi testcount
+  943  awk -f testcount filtered_verified.txt | sort -k2 -nr | head -n 10 > top10_words_verified_review_body.txt
+  944  cat top10_words_verified_review_body.txt 
+  945  ls
+  946  rm testcount 
+  947  ls
+  948  rm ws8.txt
+  949  vi ws8.txt
+  950  cat ws8.txt
+  951  $HOME
+  952  PWD
+  953  pwd
+  954  cd
+  955  ls
+  956  mv amazon_reviews_us_Books_v1_02.tsv /mnt/scratch/vivian/
+  957  ls /mnt/scratch/vivian/
+  958  rm -rf /mnt/scratch/vivian/ws8_bak/
+  959  ls /mnt/scratch/vivian/
+  960  ls
+  961  tmux attach -t ws8
+  962  cd /mnt/scratch/vivian/
+  963  ls
+  964  cd ws8
+  965  ls
+  966  more cmds.log 
+  967  echo "# ws8" >> README.md
+  968  git init
+  969  git add README.md
+  970  ls
+  971  git status
+  972  git add cmds.log
+  973  git add ws8.txt
+  974  ls
+  975  rm filteredå_unverifieåd.txtå
+  976  rm filteredå_unverifieåd.txt
+  977  cat word 
+  978  rm word
+  979  rm filtered_unverifieåd.txt
+  980  ls -l
+  981  git status
+  982  rm awktest
+  983  git status
+  984  git add top10*
+  985  git status
+  986  git commit -m 'worksheet 8 commit'
+  987  git status
+  988  git branch -M main
+  989  git remote add origin https://github.com/ivyle201/ws8.git
+  990  git push -u origin main
+  991  git config --global user.name ivyle201
+  992  ls
+  993  crontab -e
+  994  pwd
+  995  cd
+  996  ls
+  997  cd /mnt/scratch/vivian
+  998  cd ws8
+  999  sed -r "s/<\w+ *\/?>//g; s/[^a-zA-Z']/ /g; s/\b[a-zA-Z']{1,3}\b//g" verified.txt > filtered_verified.txt 
+ 1000  wc -l verified.txt 
+ 1001  sed -r "s/<\w+ *\/?>//g; s/[^a-zA-Z']/ /g; s/\b[a-zA-Z']{1,3}\b//g" unverified.txt > filtered_unverified.txt
+ 1002  wc -l unverified.txt 
+ 1003  awk -f count_words_awk_script filtered_verified.txt | sort -k2 -nr | head -n 10 > top10_words_verified_review_body.txt
+ 1004  cat top10_words_verified_review_body.txt
+ 1005  awk -f count_words_awk_script filtered_verified.txt | sort -k2 -nr | head -n 10 > top10_words_unverified_review_body.txt
+ 1006  cat top10_words_unverified_review_body.txt 
+ 1007  awk -F "\t" '$12=="Y" {print $14}' ../amazon_reviews_us_Books_v1_02.tsv | head -n 10000 > verified.txt
+ 1008  awk -F "\t" '$12=="N" {print $14}' ../amazon_reviews_us_Books_v1_02.tsv | head -n 10000 > unverified.txt
+ 1009  sed -r "s/<\w+ *\/?>//g; s/[^a-zA-Z']/ /g; s/\b[a-zA-Z']{1,3}\b//g" verified.txt > filtered_verified.txt 
+ 1010  sed -r "s/<\w+ *\/?>//g; s/[^a-zA-Z']/ /g; s/\b[a-zA-Z']{1,3}\b//g" unverified.txt > filtered_unverified.txt
+ 1011  awk -f count_words_awk_script filtered_verified.txt | sort -k2 -nr | head -n 10 > top10_words_verified_review_body.txt
+ 1012  awk -f count_words_awk_script filtered_unverified.txt | sort -k2 -nr | head -n 10 > top10_words_unverified_review_body.txt
+ 1013  cat top10_words_verified_review_body.txt
+ 1014  cat top10_words_unverified_review_body.txt
+ 1015  git status
+ 1016  touch ws8.txt
+ 1017  nano ws8.txt
+ 1018  mv ws8.txt ws8.bak.txt
+ 1019  nano ws8.txt
+ 1020  git status
+ 1021  git add ws8.txt 
+ 1022  git add top10*
+ 1023  git status
+ 1024  git commit -m 'updating assignment to remove small words'
+ 1025  git push
+ 1026  history | more
+ 1027  ls
+ 1028  history > cmds.log

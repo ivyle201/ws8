@@ -21,9 +21,11 @@ Q2
 # it is sufficient to do it just for 100 reviews so you get an idea.
 
 
-# Filter out HTML tags, characters we don't care about, and words less than 4 characters long. -r: extended regex
-[vivian@sjsu ws8]$ sed -r "s/<\w+ *\/?>//g; s/[^a-zA-Z']/ /g; s/\b[a-zA-Z']{1,3}\b//g" verified.txt > filtered_verified.txt 
-[vivian@sjsu ws8]$ sed -r "s/<\w+ *\/?>//g; s/[^a-zA-Z']/ /g; s/\b[a-zA-Z']{1,3}\b//g" unverified.txt > filtered_unverified.txt
+# Filter out HTML tags, characters we don't care about, words less than 4 characters long
+# also filter out some uninteresting 4 letter words
+# -r: extended regex
+[vivian@sjsu ws8]$ sed -r "s/<\w+ *\/?>//g; s/[^a-zA-Z']/ /g; s/\b[a-zA-Z']{1,3}\b//g; s/\b(this|that|with|from|what|about|they|have|more|will|would|some|there|their|which|just)\b/ /ig" verified.txt > filtered_verified.txt           
+[vivian@sjsu ws8]$ sed -r "s/<\w+ *\/?>//g; s/[^a-zA-Z']/ /g; s/\b[a-zA-Z']{1,3}\b//g; s/\b(this|that|with|from|what|about|they|have|more|will|would|some|there|their|which|just)\b/ /ig" unverified.txt > filtered_unverified.txt  
 
 
 # create script to count words
@@ -62,30 +64,30 @@ END {
 # count verified words and sort
 [vivian@sjsu ws8]$ awk -f count_words_awk_script filtered_verified.txt | sort -k2 -nr | head -n 10 > top10_words_verified_review_body.txt
 [vivian@sjsu ws8]$ cat top10_words_verified_review_body.txt
-this	19046
-book	17833
-that	16499
-with	10015
-have	7423
-read	5148
-from	4777
-about	4516
-more	4191
-what	3985
+book    17833
+read    5148
+very    3768
+good    3045
+like    3034
+well    2848
+great   2751
+books   2579
+other   2547
+many    2527
 
 # count unverified words and sort
 [vivian@sjsu ws8]$ awk -f count_words_awk_script filtered_unverified.txt | sort -k2 -nr | head -n 10 > top10_words_unverified_review_body.txt                                          
 [vivian@sjsu ws8]$ cat top10_words_unverified_review_body.txt 
-this	21746
-that	20978
-book	19647
-with	12636
-have	8362
-from	6371
-read	6130
-about	5627
-they	4842
-more	4719
+book    19647
+read    6130
+like    4118
+very    3837
+story   3699
+when    3266
+good    3222
+well    3111
+time    3058
+life    2914
 
 
 

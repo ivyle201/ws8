@@ -1,3 +1,8 @@
+   24  fgrep -f ../temp_graph/authors.txt a4q1.tsv > ../temp_graph/graph_top_10_authors.tsv
+   25  ls
+   26  cut -f2,5 downloaded_tweets_extend_nolf2.tsv | grep "type=retweeted" | sed -r 's/\[<ReferencedTweet id=([0-9]+) type=retweeted\]/\1/' > cutf25_grep_retweeted_sedRegex_downloaded_extend.tsv
+   27  cd A4
+   28  cut -f2,5 downloaded_tweets_extend_nolf2.tsv | grep "type=retweeted" | sed -r 's/\[<ReferencedTweet id=([0-9]+) type=retweeted\]/\1/' > cutf25_grep_retweeted_sedRegex_downloaded_extend.tsv
    29  head cutf25_grep_retweeted_sedRegex_downloaded_extend.tsv 
    30  sort -k2 cutf25_grep_retweeted_sedRegex_downloaded_extend.tsv > sorted_cutf25_grep_retweeted_sedRegex_downloaded_extend.tsv
    31  head -n 5 sorted_cutf25_grep_retweeted_sedRegex_downloaded_extend.tsv 
@@ -966,35 +971,30 @@
   994  pwd
   995  cd
   996  ls
-  997  cd /mnt/scratch/vivian
-  998  cd ws8
-  999  sed -r "s/<\w+ *\/?>//g; s/[^a-zA-Z']/ /g; s/\b[a-zA-Z']{1,3}\b//g" verified.txt > filtered_verified.txt 
- 1000  wc -l verified.txt 
- 1001  sed -r "s/<\w+ *\/?>//g; s/[^a-zA-Z']/ /g; s/\b[a-zA-Z']{1,3}\b//g" unverified.txt > filtered_unverified.txt
- 1002  wc -l unverified.txt 
- 1003  awk -f count_words_awk_script filtered_verified.txt | sort -k2 -nr | head -n 10 > top10_words_verified_review_body.txt
- 1004  cat top10_words_verified_review_body.txt
- 1005  awk -f count_words_awk_script filtered_verified.txt | sort -k2 -nr | head -n 10 > top10_words_unverified_review_body.txt
- 1006  cat top10_words_unverified_review_body.txt 
- 1007  awk -F "\t" '$12=="Y" {print $14}' ../amazon_reviews_us_Books_v1_02.tsv | head -n 10000 > verified.txt
- 1008  awk -F "\t" '$12=="N" {print $14}' ../amazon_reviews_us_Books_v1_02.tsv | head -n 10000 > unverified.txt
- 1009  sed -r "s/<\w+ *\/?>//g; s/[^a-zA-Z']/ /g; s/\b[a-zA-Z']{1,3}\b//g" verified.txt > filtered_verified.txt 
- 1010  sed -r "s/<\w+ *\/?>//g; s/[^a-zA-Z']/ /g; s/\b[a-zA-Z']{1,3}\b//g" unverified.txt > filtered_unverified.txt
+  997  sed -r "s/<\w+ *\/?>//g; s/[^a-zA-Z']/ /g; s/\b\w{1,3}\b/ /g" verified.txt | head -n 10
+  998  cd /mnt/scratch/vivian/ws8
+  999  sed -r "s/<\w+ *\/?>//g; s/[^a-zA-Z']/ /g; s/\b\w{1,3}\b/ /g" verified.txt | head -n 10
+ 1000  sed -r "s/<\w+ *\/?>//g; s/[^a-zA-Z']/ /g; s/\b[^a-zA-Z']{1,3}\b/ /g" unverified.txt > filtered_unverified.txt
+ 1001  awk -f count_words_awk_script filtered_verified.txt | sort -k2 -nr | head -n 10 > top10_words_verified_review_body.txt
+ 1002  cat top10_words_verified_review_body.txt 
+ 1003  sed -r "s/<\w+ *\/?>//g; s/[^a-zA-Z']/ /g; s/\b[a-zA-Z']{1,3}\b//g; s//\b(this|that|with|from|what|about|they|have)\b /ig" verified.txt > filtered_verified.txt
+ 1004  sed -r "s/<\w+ *\/?>//g; s/[^a-zA-Z']/ /g; s/\b[a-zA-Z']{1,3}\b//g; s/\b(this|that|with|from|what|about|they|have)\b/ /ig" verified.txt > filtered_verified.txt
+ 1005  awk -f count_words_awk_script filtered_verified.txt | sort -k2 -nr | head -n 10 > top10_words_verified_review_body.txt
+ 1006  cat top10_words_verified_review_body.txt 
+ 1007  sed -r "s/<\w+ *\/?>//g; s/[^a-zA-Z']/ /g; s/\b[a-zA-Z']{1,3}\b//g; s/\b(this|that|with|from|what|about|they|have|more|will|would|some|there)\b/ /ig" verified.txt > filtered_verified.txt
+ 1008  awk -f count_words_awk_script filtered_verified.txt | sort -k2 -nr | head -n 10 > top10_words_verified_review_body.txt
+ 1009  cat top10_words_verified_review_body.txt 
+ 1010  sed -r "s/<\w+ *\/?>//g; s/[^a-zA-Z']/ /g; s/\b[a-zA-Z']{1,3}\b//g; s/\b(this|that|with|from|what|about|they|have|more|will|would|some|there|their|which|just)\b/ /ig" verified.txt > filtered_verified.txt
  1011  awk -f count_words_awk_script filtered_verified.txt | sort -k2 -nr | head -n 10 > top10_words_verified_review_body.txt
- 1012  awk -f count_words_awk_script filtered_unverified.txt | sort -k2 -nr | head -n 10 > top10_words_unverified_review_body.txt
- 1013  cat top10_words_verified_review_body.txt
- 1014  cat top10_words_unverified_review_body.txt
- 1015  git status
- 1016  touch ws8.txt
- 1017  nano ws8.txt
- 1018  mv ws8.txt ws8.bak.txt
- 1019  nano ws8.txt
- 1020  git status
- 1021  git add ws8.txt 
- 1022  git add top10*
- 1023  git status
- 1024  git commit -m 'updating assignment to remove small words'
- 1025  git push
- 1026  history | more
- 1027  ls
- 1028  history > cmds.log
+ 1012  cat top10_words_verified_review_body.txt 
+ 1013  sed -r "s/<\w+ *\/?>//g; s/[^a-zA-Z']/ /g; s/\b[a-zA-Z']{1,3}\b//g; s/\b(this|that|with|from|what|about|they|have|more|will|would|some|there|their|which|just)\b/ /ig" verified.txt
+ 1014  sed -r "s/<\w+ *\/?>//g; s/[^a-zA-Z']/ /g; s/\b[a-zA-Z']{1,3}\b//g; s/\b(this|that|with|from|what|about|they|have|more|will|would|some|there|their|which|just)\b/ /ig" verified.txt > filtered_verified.txt
+ 1015  sed -r "s/<\w+ *\/?>//g; s/[^a-zA-Z']/ /g; s/\b[a-zA-Z']{1,3}\b//g; s/\b(this|that|with|from|what|about|they|have|more|will|would|some|there|their|which|just)\b/ /ig" unverified.txt > filtered_unverified.txt
+ 1016  awk -f count_words_awk_script filtered_verified.txt | sort -k2 -nr | head -n 10 > top10_words_verified_review_body.txt
+ 1017  cat top10_words_verified_review_body.txt
+ 1018  awk -f count_words_awk_script filtered_unverified.txt | sort -k2 -nr | head -n 10 > top10_words_unverified_review_body.txt
+ 1019  cat top10_words_unverified_review_body.txt
+ 1020  mv ws8.txt ws8.bak2.txt
+ 1021  nano ws8.txt
+ 1022  ls
+ 1023  history > cmds.log
